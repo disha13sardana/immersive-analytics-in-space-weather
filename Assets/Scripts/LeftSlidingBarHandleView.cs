@@ -51,25 +51,7 @@ namespace Scenes
 
             Dictionary<int, Dictionary<string, float>> dataa = new Dictionary<int, Dictionary<string, float>>
             {
-                {1, new Dictionary<string, float>()},
-                {2, new Dictionary<string, float>()},
-                {3, new Dictionary<string, float>()},
-                {4, new Dictionary<string, float>()},
-                {5, new Dictionary<string, float>()},
-                {6, new Dictionary<string, float>()},
-                {7, new Dictionary<string, float>()},
-                {8, new Dictionary<string, float>()},
-                {9, new Dictionary<string, float>()},
-                {10, new Dictionary<string, float>()},
-                {11, new Dictionary<string, float>()},
-                {12, new Dictionary<string, float>()},
-                {13, new Dictionary<string, float>()},
-                {14, new Dictionary<string, float>()},
-                {15, new Dictionary<string, float>()},
-                {16, new Dictionary<string, float>()},
-                {17, new Dictionary<string, float>()},
-                {18, new Dictionary<string, float>()},
-                {19, new Dictionary<string, float>()}
+                {1, new Dictionary<string, float>()}
             };
 
             while (currentTimeStamp < endTimeStamp)

@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e4078ca-3c8d-4740-8dde-9b2e502945b8" name="Default Changelist" comment="" />
+    <list default="true" id="0e4078ca-3c8d-4740-8dde-9b2e502945b8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/LeftSlidingBarHandle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/LeftSlidingBarHandle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapPlotViewWithLines.cs" root0="FORCE_HIGHLIGHTING" />
@@ -31,6 +40,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1iQYqEYltrmWOnz6gUzjaq6OeZo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -40,6 +50,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.SolutionExplorerActivator" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -75,6 +86,7 @@
       <workItem from="1601841478730" duration="1899000" />
       <workItem from="1601843563331" duration="398000" />
       <workItem from="1601844141817" duration="3328000" />
+      <workItem from="1601848147215" duration="1180000" />
     </task>
     <servers />
   </component>
