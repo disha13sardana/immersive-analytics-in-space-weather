@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 2934240563684787217}
   - component: {fileID: 2934240563684787216}
   - component: {fileID: 2934240563684787219}
-  - component: {fileID: 6533097220232250574}
-  - component: {fileID: 7739831991712413896}
+  - component: {fileID: 5049659930372301132}
+  - component: {fileID: 2427238901317900888}
   m_Layer: 0
-  m_Name: LeftSlidingBarHandle
+  m_Name: RightSlidingBarHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &6533097220232250574
+--- !u!114 &5049659930372301132
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,10 +106,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2934240563684787213}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68fd1f2fb989a544ab8cca918d33b3dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 46589eb689081044385af9eaf41ab570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7739831991712413896
+--- !u!114 &2427238901317900888
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2934240563684787213}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cddbdd9725593d94f84c5274724f6c6d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d26ad810e7e6d74d96c4cd44bbe2074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7781557505148650073

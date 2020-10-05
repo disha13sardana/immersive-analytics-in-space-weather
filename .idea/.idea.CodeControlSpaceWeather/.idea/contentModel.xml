@@ -137,6 +137,9 @@
           <e p="MC1Data.cs" t="Include" />
           <e p="MC1DataSet.cs" t="Include" />
           <e p="Report.cs" t="Include" />
+          <e p="RightSlidingBarHandleController.cs" t="Include" />
+          <e p="RightSlidingBarHandleModel.cs" t="Include" />
+          <e p="RightSlidingBarHandleView.cs" t="Include" />
         </e>
       </e>
       <e p="CodeControlSpaceWeather.sln" t="IncludeFlat" />

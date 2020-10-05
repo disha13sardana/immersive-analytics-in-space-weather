@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e4078ca-3c8d-4740-8dde-9b2e502945b8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/LeftSlidingBarHandle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/LeftSlidingBarHandle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/LinePlotPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/LinePlotPrefab.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,14 +20,21 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapPlotViewWithLines.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/LeftSlidingBarHandle.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapPlotControllerWithLines.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapPlotModelWithLines.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../VE - CS 5754/CodeControlProject/CodeControlProject/Assets/Scenes/PlotController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../VE - CS 5754/CodeControlProject/CodeControlProject/Assets/Scenes/MapPlotModel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapPlotModelWithLines.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LinePlotView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LinePlotModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../VE - CS 5754/CodeControlProject/CodeControlProject/Assets/Scenes/Main.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeControl/Scripts/Source/Controller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeControl/Example/Scripts/Other/TurretCursor.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -33,9 +42,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Main.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" />
       </list>
     </option>
   </component>
@@ -86,7 +98,8 @@
       <workItem from="1601841478730" duration="1899000" />
       <workItem from="1601843563331" duration="398000" />
       <workItem from="1601844141817" duration="3328000" />
-      <workItem from="1601848147215" duration="1180000" />
+      <workItem from="1601848147215" duration="1603000" />
+      <workItem from="1601922781525" duration="3206000" />
     </task>
     <servers />
   </component>

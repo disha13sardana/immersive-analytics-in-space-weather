@@ -88,9 +88,9 @@ namespace Scenes
                     Vector3.Scale(keyValuePair.Value - new Vector3(0.5f, 0.5f, 0.5f), new Vector3(-10f, 1f, 10f)) +
                     new Vector3(0, 1f, 0);
                 linePlotModel.OriginPosition.y = linePlotModel.OriginPosition.y - 0.5f;
-                linePlotModel.Scale = new Vector3(0.2f, 0.15f, 0.5f);
+                linePlotModel.Scale = new Vector3(0.2f, 0.15f, 5f);
                 linePlotModel.Data = dataa[keyValuePair.Key];
-                linePlotModel.LineWidth = 0.01f;
+                linePlotModel.LineWidth = 0.1f;
                 linePlotModel.Rotation = new Vector3(-90f, 0f, 0f);
                 linePlotModel.DataPointScale = Vector3.one / resolution;
                 Controller.Instantiate<LinePlotController>(linePlotModel.PrefabName, linePlotModel, transform);
