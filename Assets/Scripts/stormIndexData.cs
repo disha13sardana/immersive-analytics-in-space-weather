@@ -4,20 +4,20 @@ using UnityEngine;
 
 namespace Scenes
 {
-    public class Mc1Data
+    public class stormIndexData
     {
         private Dictionary<DateTime, AllReportsAtTimeStamp> data;
 
-        public readonly DateTime startDateTime = new DateTime(2020, 04, 06, 00, 00, 00);
+        public readonly DateTime startDateTime = new DateTime(2011, 10, 24, 00, 00, 00);
         
         public readonly TimeSpan timeStep = TimeSpan.FromMinutes(5);
 
-        public Mc1Data(List<Dictionary<string, object>> pointList)
+        public stormIndexData(List<Dictionary<string, object>> pointList)
         {
             Initialize(pointList);
         }
 
-        public Mc1Data(string resourcePath)
+        public stormIndexData(string resourcePath)
         {
             List<Dictionary<string, object>> pointList = CSVReader.Read(resourcePath);
             Initialize(pointList);
@@ -29,7 +29,7 @@ namespace Scenes
 
             foreach (Dictionary<string, object> report in pointList)
             {
-                DateTime timeStamp = DateTime.Parse(report["time"].ToString());
+                DateTime timeStamp = DateTime.Parse(report["DateTime"].ToString());
 
                 // Initialize the key-value pair in the output dict if not present.
                 if (!data.ContainsKey(timeStamp))
@@ -40,11 +40,14 @@ namespace Scenes
                 // Create the report from the given dict report.
                 Report myReport = new Report(report);
                 
+                Debug.Log(myReport);
                 // Extract the location from the current report.
-                var location = (int) report["location"];
-
+                var location = (int) report["Location"];
+                
                 // Add the report to the current timestamp object.
                 data[timeStamp].AddReport(location, myReport);
+                
+  
             }
         }
 

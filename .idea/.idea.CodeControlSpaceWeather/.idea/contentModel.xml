@@ -118,6 +118,9 @@
             </e>
           </e>
         </e>
+        <e p="Resources" t="Include">
+          <e p="sym2011.txt" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="AggregateReport.cs" t="Include" />
           <e p="AllReportsAtTimeStamp.cs" t="Include" />
@@ -140,6 +143,9 @@
           <e p="RightSlidingBarHandleController.cs" t="Include" />
           <e p="RightSlidingBarHandleModel.cs" t="Include" />
           <e p="RightSlidingBarHandleView.cs" t="Include" />
+          <e p="stormIndexData.cs" t="Include" />
+          <e p="stormIndexDataSet.cs" t="Include" />
+          <e p="stormIndexDataUtil.cs" t="Include" />
         </e>
       </e>
       <e p="CodeControlSpaceWeather.sln" t="IncludeFlat" />
