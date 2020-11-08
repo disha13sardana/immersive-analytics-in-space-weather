@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\disha\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\disha\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_CodeControlSpaceWeather.1619054158.00" t="ExcludeRecursive" />
-    <e p="C:\Users\disha\Desktop\CodeControlSpaceWeather\CodeControlSpaceWeather" t="IncludeRecursive">
+    <e p="C:\Users\disha\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_CodeControlSpaceWeather.2049884331.00" t="ExcludeRecursive" />
+    <e p="C:\Users\disha\Desktop\github\CodeControlSpaceWeather\CodeControlSpaceWeather" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -137,8 +137,11 @@
           <e p="MapPlotControllerWithLines.cs" t="Include" />
           <e p="MapPlotModelWithLines.cs" t="Include" />
           <e p="MapPlotViewWithLines.cs" t="Include" />
+          <e p="MC1AggregateReport.cs" t="Include" />
+          <e p="MC1AllReportsAtTimeStamp.cs" t="Include" />
           <e p="MC1Data.cs" t="Include" />
           <e p="MC1DataSet.cs" t="Include" />
+          <e p="MC1Report.cs" t="Include" />
           <e p="Report.cs" t="Include" />
           <e p="RightSlidingBarHandleController.cs" t="Include" />
           <e p="RightSlidingBarHandleModel.cs" t="Include" />

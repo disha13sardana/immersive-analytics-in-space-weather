@@ -5,52 +5,53 @@ using UnityEditor;
 
 namespace Scenes
 {
-    public class AggregateReport
+    public class MC1AggregateReport
     {
-        private readonly Report sumValues = new Report(new List<int>(new int[Report.ColumnNameToPositionDict.Count]));
+        private readonly MC1Report sumValues = new MC1Report(new List<int>(new int[MC1Report.ColumnNameToPositionDict.Count]));
 
 //        private readonly Report average = new Report(new List<int>(new int[Report.ColumnNameToPositionDict.Count]));
-        private List<float> av = new List<float>(new float[Report.ColumnNameToPositionDict.Count]);
+        private List<float> av = new List<float>(new float[MC1Report.ColumnNameToPositionDict.Count]);
         private int totalReportsAggregated = 0;
 
         private Dictionary<string, int> ColumnNameToValueCountDictionary = new Dictionary<string, int>
         {
-            {"DOY", 0},
-            {"ASY_D", 0},
-            {"ASY_H", 0},
-            {"SYM_D", 0},
-            {"SYM_H", 0},
-            {"Location", 0},
-
+            {"sewer_and_water", 0},
+            {"power", 0},
+            {"roads_and_bridges", 0},
+            {"medical", 0},
+            {"buildings", 0},
+            {"shake_intensity", 0},
+            {"location", 0},
         };
 
         public static readonly List<string> ColumnNames = new List<string>
         {
-            "DOY",
-            "ASY_D",
-            "ASY_H",
-            "SYM_D",
-            "SYM_H",
-            "Location"
+            "sewer_and_water",
+            "power",
+            "roads_and_bridges",
+            "medical",
+            "buildings",
+            "shake_intensity",
+            "location"
         };
 
-        public AggregateReport()
+        public MC1AggregateReport()
         {
-            sumValues = new Report(new List<int>(new int[Report.ColumnNameToPositionDict.Count]));
-            av = new List<float>(new float[Report.ColumnNameToPositionDict.Count]);
+            sumValues = new MC1Report(new List<int>(new int[MC1Report.ColumnNameToPositionDict.Count]));
+            av = new List<float>(new float[MC1Report.ColumnNameToPositionDict.Count]);
             totalReportsAggregated = 0;
         }
 
-        public AggregateReport(List<Report> reports)
+        public MC1AggregateReport(List<MC1Report> reports)
         {
-            foreach (Report report in reports)
+            foreach (MC1Report report in reports)
             {
-                Report nonNegativeReport = report.GetNonNegativeCopy();
+                MC1Report nonNegativeReport = report.GetNonNegativeCopy();
                 AddReport(report, nonNegativeReport);
             }
         }
 
-        public void AddReport(Report report, Report nonNegativeReport)
+        public void AddReport(MC1Report report, MC1Report nonNegativeReport)
         {
             for (int i = 0; i < nonNegativeReport.Count(); i++)
             {
@@ -74,7 +75,7 @@ namespace Scenes
 
         private void RecomputeAverages()
         {
-            for (int i = 0; i < Report.ColumnNameToPositionDict.Count; i++)
+            for (int i = 0; i < MC1Report.ColumnNameToPositionDict.Count; i++)
             {
                 var avg = (float) sumValues.ReadValue(i) / totalReportsAggregated;
                 //average.WriteValue(i, avg);
@@ -82,7 +83,7 @@ namespace Scenes
             }
         }
 
-        public Report GetSum()
+        public MC1Report GetSum()
         {
             return sumValues;
         }

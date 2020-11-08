@@ -7,11 +7,11 @@ using UnityEngine.Audio;
 
 namespace Scenes
 {
-    public class stormIndexDataUtil
+    public class StormIndexDataUtil
     {
         public static readonly float EPSILON = 0.001f;
 
-        public static readonly IList<string> stormIndex_COLUMN_NAMES = new ReadOnlyCollection<string>
+        public static readonly IList<string> StormIndexColumnNames = new ReadOnlyCollection<string>
         (
             new List<String>
             {
@@ -48,7 +48,7 @@ namespace Scenes
             {
                 for (int i = 0; i < totalRows; i++)
                 {
-                    string timeStamp = pointList[i][stormIndex_COLUMN_NAMES[0]].ToString();
+                    string timeStamp = pointList[i][StormIndexColumnNames[0]].ToString();
                     //Debug.Log("Time Stamp: " + timeStamp);
                     DateTime csvDateTime = DateTime.Parse(timeStamp);
                     int result = DateTime.Compare(startDateTime, csvDateTime);
@@ -58,7 +58,7 @@ namespace Scenes
                         //Debug.Log("start Time:" + startDateTime);
                         //Debug.Log("Column 1 Values:" + (pointList[i][MC1_COLUMN_NAMES[1]]));
 
-                        retVal[timeStamp] = Convert.ToSingle(pointList[i][stormIndex_COLUMN_NAMES[5]]);
+                        retVal[timeStamp] = Convert.ToSingle(pointList[i][StormIndexColumnNames[5]]);
                         startDateTime = startDateTime + intervalDateTime;
                     }
                 }
@@ -72,6 +72,8 @@ namespace Scenes
         {
             Dictionary<DateTime, AllReportsAtTimeStamp> output = new Dictionary<DateTime, AllReportsAtTimeStamp>();
 
+           // Dictionary<DateTime, List<Report>>;
+            
             foreach (Dictionary<string, object> report in pointList)
             {
                 DateTime timeStamp = DateTime.Parse(report["DateTime"].ToString());

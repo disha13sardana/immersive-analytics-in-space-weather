@@ -18,8 +18,11 @@ namespace Scenes
         {
             //SpatialMapping.Instance.DrawVisualMeshes = false;
 
-            pointList = CSVReader.Read("mc1_clean");
-            mc1Data = new Mc1Data("mc1_processed_neg_1");
+            // pointList = CSVReader.Read("mc1_clean");
+            // mc1Data = new Mc1Data("mc1_processed_neg_1");
+            
+            pointList = CSVReader.Read("storm_day_sy_index");
+            var stormIndexData = new StormIndexData("mc1_processed_neg_1");
 
             // Left sliding bar handle with line
             LeftSlidingBarHandleModel leftSlidingBarHandleModel = new LeftSlidingBarHandleModel();

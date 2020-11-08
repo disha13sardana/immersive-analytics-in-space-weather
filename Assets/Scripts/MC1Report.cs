@@ -5,29 +5,29 @@ using System.Linq;
 // every row of the data file is a report
 namespace Scenes
 {
-    public class Report
+    public class MC1Report
     {
         private readonly List<int> values;
 
         public static readonly Dictionary<string, int> ColumnNameToPositionDict = new Dictionary<string, int>
         {
-            {"DOY", 0},
-            {"ASY_D", 1},
-            {"ASY_H", 2},
-            {"SYM_D", 3},
-            {"SYM_H", 4},
-            {"Location", 5},
-            
+            {"sewer_and_water", 0},
+            {"power", 1},
+            {"roads_and_bridges", 2},
+            {"medical", 3},
+            {"buildings", 4},
+            {"shake_intensity", 5},
+            {"location", 6},
         };
 
-        public Report(List<int> values)
+        public MC1Report(List<int> values)
         {
             if (values == null || values.Count == 0)
             {
                 throw new Exception("Not allowed to assign an empty list.");
             }
 
-            if (values.Count != 6)
+            if (values.Count != 7)
             {
                 throw new Exception("Invalid number of elements in the list.");
             }
@@ -35,31 +35,33 @@ namespace Scenes
             this.values = values;
         }
 
-        public Report(IReadOnlyDictionary<string, object> report)
+        public MC1Report(IReadOnlyDictionary<string, object> report)
         {
             if (report == null || report.Count == 0)
             {
                 throw new Exception("Dict is empty. Cannot initialize the constructor.");
             }
 
-            if (report.Count != 7)
+            if (report.Count != 8)
             {
                 throw new Exception("Invalid number of elements in the list.");
             }
 
             values = new List<int>();
 
-            var doy = DataUtil.ParseToInt(report["DOY"]);
-            values.Add(doy);
-            var asyD = DataUtil.ParseToInt(report["ASY_D"]);
-            values.Add(asyD);
-            var asyH = DataUtil.ParseToInt(report["ASY_H"]);
-            values.Add(asyH);
-            var symD = DataUtil.ParseToInt(report["SYM_D"]);
-            values.Add(symD);
-            var symH = DataUtil.ParseToInt(report["SYM_H"]);
-            values.Add(symH);
-            var location = DataUtil.ParseToInt(report["Location"]);
+            var sewerAndWater = DataUtil.ParseToInt(report["sewer_and_water"]);
+            values.Add(sewerAndWater);
+            var power = DataUtil.ParseToInt(report["power"]);
+            values.Add(power);
+            var roadsAndBridges = DataUtil.ParseToInt(report["roads_and_bridges"]);
+            values.Add(roadsAndBridges);
+            var medical = DataUtil.ParseToInt(report["medical"]);
+            values.Add(medical);
+            var buildings = DataUtil.ParseToInt(report["buildings"]);
+            values.Add(buildings);
+            var shakeIntensity = DataUtil.ParseToInt(report["shake_intensity"]);
+            values.Add(shakeIntensity);
+            var location = DataUtil.ParseToInt(report["location"]);
             values.Add(location);
         }
 
@@ -99,7 +101,7 @@ namespace Scenes
             return values.Count;
         }
 
-        public Report GetNonNegativeCopy()
+        public MC1Report GetNonNegativeCopy()
         {
             List<int> nonNegativeValues = new List<int>();
             for (int i = 0; i < values.Count; i++)
@@ -114,15 +116,15 @@ namespace Scenes
                 }
             }
 
-            return new Report(nonNegativeValues);
+            return new MC1Report(nonNegativeValues);
         }
 
-        public static Report operator +(Report report1, Report report2)
+        public static MC1Report operator +(MC1Report report1, MC1Report report2)
         {
             // Ensuring that report 1 is always lesser in length.
             if (report1.Count() > report2.Count())
             {
-                Report temp = report1;
+                MC1Report temp = report1;
                 report1 = report2;
                 report2 = temp;
             }
@@ -140,7 +142,7 @@ namespace Scenes
                 result.Add(val1 + val2);
             }
 
-            return new Report(result);
+            return new MC1Report(result);
         }
 
         public List<int> GetAllValues()

@@ -3,9 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="0e4078ca-3c8d-4740-8dde-9b2e502945b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MC1Data.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MC1Data.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/storm_day_sym_index.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/storm_day_sym_index.xlsx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AggregateReport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AggregateReport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AllReportsAtTimeStamp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AllReportsAtTimeStamp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Report.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Report.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/stormIndexData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/stormIndexData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/stormIndexDataSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/stormIndexDataSet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/stormIndexDataUtil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/stormIndexDataUtil.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,36 +23,37 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapPlotViewWithLines.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeControl/Example/Scripts/Other/TurretCursor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/LeftSlidingBarHandle.prefab" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapPlotControllerWithLines.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../VE - CS 5754/CodeControlProject/CodeControlProject/Assets/Scenes/MapPlotModel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/stormIndexDataSet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8691AD70-05ED-4755-A182-8378FF0B52B1/70/7b1bc42c/LineRenderer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../VE - CS 5754/CodeControlProject/CodeControlProject/Assets/Scenes/Main.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CSVReader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MC1Report.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StormIndexDataSet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CSVUtil.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeControl/Scripts/Source/Controller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../VE - CS 5754/CodeControlProject/CodeControlProject/Assets/Scenes/PlotController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Report.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MC1DataSet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapPlotModelWithLines.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LinePlotView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MC1Data.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/stormIndexDataUtil.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MC1DataSet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LinePlotController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StormIndexData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapPlotViewWithLines.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8691AD70-05ED-4755-A182-8378FF0B52B1/70/7b1bc42c/LineRenderer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AllReportsAtTimeStamp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MC1AggregateReport.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DataUtil.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapPlotControllerWithLines.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LinePlotModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CSVUtil.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DataUtil.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AllReportsAtTimeStamp.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/stormIndexData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CSVReader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeControl/Example/Scripts/Other/TurretCursor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StormIndexDataUtil.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MC1Data.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Report.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MC1AllReportsAtTimeStamp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LinePlotView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeControl/Scripts/Source/Controller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AggregateReport.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -53,14 +61,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Main.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MC1Data.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/stormIndexData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/stormIndexDataUtil.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MC1Report.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Report.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MC1AggregateReport.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AggregateReport.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MC1AllReportsAtTimeStamp.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AllReportsAtTimeStamp.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/stormIndexData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/stormIndexDataSet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StormIndexDataUtil.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Main.cs" />
       </list>
     </option>
   </component>
@@ -115,6 +130,11 @@
       <workItem from="1601922781525" duration="3396000" />
       <workItem from="1602169822114" duration="721000" />
       <workItem from="1602352001733" duration="7649000" />
+      <workItem from="1602363172664" duration="567000" />
+      <workItem from="1602427750855" duration="3116000" />
+      <workItem from="1602701392193" duration="1318000" />
+      <workItem from="1602860759728" duration="892000" />
+      <workItem from="1604862078011" duration="8201000" />
     </task>
     <servers />
   </component>
@@ -123,10 +143,22 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="233" y="73" key="Rider.ProjectTemplateDialog.Size" timestamp="1601845007422">
+    <state x="233" y="73" key="Rider.ProjectTemplateDialog.Size" timestamp="1604865415813">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="233" y="73" key="Rider.ProjectTemplateDialog.Size/0.0.1280.680/-1920.-185.1920.1040@0.0.1280.680" timestamp="1604865415813" />
     <state x="233" y="73" key="Rider.ProjectTemplateDialog.Size/0.0.1280.680/1920.4.1920.1040@0.0.1280.680" timestamp="1601845007422" />
     <state x="357" y="45" key="VCS.ChangeListViewerDialog" timestamp="1602356945453">
       <screen x="0" y="0" width="1280" height="680" />

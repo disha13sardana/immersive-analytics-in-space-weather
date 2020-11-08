@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Acting as a csv file for the code; either hold the data or supply the data
+
 namespace Scenes
 {
-    public class stormIndexData
+    public class StormIndexData
     {
         private Dictionary<DateTime, AllReportsAtTimeStamp> data;
 
@@ -12,12 +14,12 @@ namespace Scenes
         
         public readonly TimeSpan timeStep = TimeSpan.FromMinutes(5);
 
-        public stormIndexData(List<Dictionary<string, object>> pointList)
+        public StormIndexData(List<Dictionary<string, object>> pointList)
         {
             Initialize(pointList);
         }
 
-        public stormIndexData(string resourcePath)
+        public StormIndexData(string resourcePath)
         {
             List<Dictionary<string, object>> pointList = CSVReader.Read(resourcePath);
             Initialize(pointList);
