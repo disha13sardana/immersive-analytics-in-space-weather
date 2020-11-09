@@ -17,7 +17,7 @@ namespace Scenes
             view.SetRotation(model.Rotation);
             view.SetPosition(model.CenterPosition);
             view.SetScale(model.Scale);
-            view.PlotLinePlots(model.RegionIdToLocationMap, model.Mc1Data);
+            view.PlotLinePlots(model.RegionIdToLocationMap, model.StormIndexData);
             view.SetPlotLabel(model.Label);
         }
 

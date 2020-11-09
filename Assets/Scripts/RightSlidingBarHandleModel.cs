@@ -12,7 +12,7 @@ namespace Scenes
         public Vector3 Scale = new Vector3(10f, 0.1f, 10f);
         public Vector3 Rotation = Vector3.zero;
         public List<Dictionary<string, object>> PointList = new List<Dictionary<string, object>>();
-        public Mc1Data Mc1Data;
+        public StormIndexData StormIndexData;
         public string Label;
 
         public readonly Dictionary<int, Vector3> RegionIdToLocationMap = new Dictionary<int, Vector3>

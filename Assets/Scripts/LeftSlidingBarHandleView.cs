@@ -43,10 +43,10 @@ namespace Scenes
             );
         }
 
-        public void PlotLinePlots(Dictionary<int, Vector3> regionIdToLocationMap, Mc1Data modelMc1Data)
+        public void PlotLinePlots(Dictionary<int, Vector3> regionIdToLocationMap, StormIndexData modelStormIndexDataData)
         {
-            DateTime endTimeStamp = new DateTime(2020, 04, 11, 00, 00, 00);
-            DateTime currentTimeStamp = new DateTime(2020, 04, 06, 00, 00, 00);
+            DateTime endTimeStamp = new DateTime(2011, 10, 25, 23, 59, 00);
+            DateTime currentTimeStamp = new DateTime(2011, 10, 24, 00, 00, 00);
             TimeSpan fiveMinutes = TimeSpan.FromMinutes(5);
 
             Dictionary<int, Dictionary<string, float>> dataa = new Dictionary<int, Dictionary<string, float>>
@@ -59,7 +59,7 @@ namespace Scenes
                 AllReportsAtTimeStamp allReportsAtTimeStamp = new AllReportsAtTimeStamp(currentTimeStamp);
                 try
                 {
-                    allReportsAtTimeStamp = modelMc1Data.GetData(currentTimeStamp);
+                    allReportsAtTimeStamp = modelStormIndexDataData.GetData(currentTimeStamp);
                 }
                 catch (Exception e)
                 {

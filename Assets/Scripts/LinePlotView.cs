@@ -6,7 +6,7 @@ namespace Scenes
 {
     public class LinePlotView : MonoBehaviour
     {
-        private DateTime startDateTime = new DateTime(2020, 04, 06, 00, 00, 00);
+        private DateTime startDateTime = new DateTime(2011, 10, 24, 00, 00, 00);
         float opacity = .5f;
 
         public void PlotData(Dictionary<string, float> timeStampToValueMap, float lineWidth)

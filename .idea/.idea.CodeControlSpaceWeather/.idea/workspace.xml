@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e4078ca-3c8d-4740-8dde-9b2e502945b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/storm_day_sym_index.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/storm_day_sym_index.xlsx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AggregateReport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AggregateReport.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AllReportsAtTimeStamp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AllReportsAtTimeStamp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LinePlotView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LinePlotView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Report.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Report.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/stormIndexData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/stormIndexData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/stormIndexDataSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/stormIndexDataSet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/stormIndexDataUtil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/stormIndexDataUtil.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,12 +55,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MC1Data.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/stormIndexDataUtil.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MC1Report.cs" />
@@ -75,6 +68,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/stormIndexData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/stormIndexDataSet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StormIndexDataUtil.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LinePlotView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Main.cs" />
       </list>
     </option>
@@ -135,6 +133,7 @@
       <workItem from="1602701392193" duration="1318000" />
       <workItem from="1602860759728" duration="892000" />
       <workItem from="1604862078011" duration="8201000" />
+      <workItem from="1604882936535" duration="1566000" />
     </task>
     <servers />
   </component>
@@ -148,7 +147,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

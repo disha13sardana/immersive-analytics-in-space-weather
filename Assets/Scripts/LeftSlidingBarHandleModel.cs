@@ -11,7 +11,7 @@ namespace Scenes
         public Vector3 CenterPosition = new Vector3();
         public Vector3 Scale = new Vector3(1f, 1f, 1f);
         public Vector3 Rotation = Vector3.zero;
-        public Mc1Data Mc1Data;
+        public StormIndexData StormIndexData;
         public string Label = "";
 
         public readonly Dictionary<int, Vector3> RegionIdToLocationMap = new Dictionary<int, Vector3>
