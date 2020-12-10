@@ -146,9 +146,9 @@
           <e p="RightSlidingBarHandleController.cs" t="Include" />
           <e p="RightSlidingBarHandleModel.cs" t="Include" />
           <e p="RightSlidingBarHandleView.cs" t="Include" />
-          <e p="stormIndexData.cs" t="Include" />
           <e p="stormIndexDataSet.cs" t="Include" />
           <e p="stormIndexDataUtil.cs" t="Include" />
+          <e p="StormIndexReport.cs" t="Include" />
         </e>
       </e>
       <e p="CodeControlSpaceWeather.sln" t="IncludeFlat" />

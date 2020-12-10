@@ -17,9 +17,9 @@ public class StormIndexDataSet
     // public float[,,] data = new float[19, 6, 1441]; // n_regions x n_columns x n_time_steps
     public float[,,] data = new float[1, 5, totalTimeSteps]; // n_regions x n_columns x n_time_steps
     
-    private TimeSpan fiveMinutes = TimeSpan.FromMinutes(5);
-    DateTime earliestTimeStamp = new DateTime(2011, 10, 24, 00, 00, 00);
-    DateTime lastTimeStamp = new DateTime(2011, 10, 25, 23, 59, 00);
+    public TimeSpan timeResolution = TimeSpan.FromMinutes(5);
+    public DateTime earliestTimeStamp = new DateTime(2011, 10, 24, 00, 00, 00);
+    public DateTime lastTimeStamp = new DateTime(2011, 10, 25, 23, 59, 00);
     
     public StormIndexDataSet(string fileName)
     {
@@ -47,6 +47,8 @@ public class StormIndexDataSet
             
             float SYM_H = float.Parse(report[StormIndexDataUtil.StormIndexColumnNames[5]].ToString());
             data[region, 4, timeStampIndex] = SYM_H;
+            
+            Debug.Log("loading..." + timeStampIndex + "  SYM " + data[0, 4, timeStampIndex]);
             
         }
     }

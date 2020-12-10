@@ -11,7 +11,7 @@ namespace Scenes
         private RightSlidingBarHandleController rightSlidingBarHandleController;
         
         private List<Dictionary<string, object>> pointList;
-        private StormIndexData stormIndexData;
+        // private StormIndexData stormIndexData;
         private float CMVScale = 0.3f;
 
         void Start()
@@ -22,7 +22,7 @@ namespace Scenes
             // mc1Data = new Mc1Data("mc1_processed_neg_1");
             
             pointList = CSVReader.Read("storm_day_sym_index");
-            var stormIndexData = new StormIndexData("storm_day_sym_index");
+            var stormIndexDataSet = new StormIndexDataSet("storm_day_sym_index");
 
             // Left sliding bar handle with line
             LeftSlidingBarHandleModel leftSlidingBarHandleModel = new LeftSlidingBarHandleModel();
@@ -30,7 +30,7 @@ namespace Scenes
             leftSlidingBarHandleModel.CenterPosition = new Vector3(0f, 10f, 6f);
             leftSlidingBarHandleModel.Scale = new Vector3(1f,0.1f,1f);
             leftSlidingBarHandleModel.Rotation = new Vector3(90f,180f,0f);
-            leftSlidingBarHandleModel.StormIndexData = stormIndexData;
+            leftSlidingBarHandleModel.StormIndexDataSet = stormIndexDataSet;
             leftSlidingBarHandleModel.Label = "Dst Index (nT) at 00:00 hrs";
             leftSlidingBarHandleController = Controller.Instantiate<LeftSlidingBarHandleController>(
                 LeftSlidingBarHandleModel.PrefabName, leftSlidingBarHandleModel, transform);
@@ -41,7 +41,7 @@ namespace Scenes
             rightSlidingBarHandleModel.CenterPosition = new Vector3(0f, 10f, -6f);
             rightSlidingBarHandleModel.Scale = new Vector3(1f,0.1f,1f);
             rightSlidingBarHandleModel.Rotation = new Vector3(90f,180f,0f);
-            rightSlidingBarHandleModel.StormIndexData = stormIndexData;
+            rightSlidingBarHandleModel.StormIndexDataSet = stormIndexDataSet;
             rightSlidingBarHandleModel.Label = "Dst Index (nT) at xx:xx hrs";
             rightSlidingBarHandleController = Controller.Instantiate<RightSlidingBarHandleController>(
                 RightSlidingBarHandleModel.PrefabName, rightSlidingBarHandleModel, transform);
