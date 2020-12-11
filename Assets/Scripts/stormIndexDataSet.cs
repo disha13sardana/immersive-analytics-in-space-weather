@@ -20,6 +20,8 @@ public class StormIndexDataSet
     public TimeSpan timeResolution = TimeSpan.FromMinutes(5);
     public DateTime earliestTimeStamp = new DateTime(2011, 10, 24, 00, 00, 00);
     public DateTime lastTimeStamp = new DateTime(2011, 10, 25, 23, 59, 00);
+    // public DateTime lastTimeStamp = new DateTime(2011, 10, 24, 01, 00, 00);
+    
     
     public StormIndexDataSet(string fileName)
     {
@@ -29,6 +31,7 @@ public class StormIndexDataSet
             Dictionary<string, object> report = pointList[i];
 
             DateTime timeStamp = DateTime.Parse(report[StormIndexDataUtil.StormIndexColumnNames[0]].ToString());
+            
             int timeStampIndex = DateTimeToIndex(timeStamp);
 
             int region = Int32.Parse(report[StormIndexDataUtil.StormIndexColumnNames[6]].ToString()) - 1;
@@ -48,10 +51,13 @@ public class StormIndexDataSet
             float SYM_H = float.Parse(report[StormIndexDataUtil.StormIndexColumnNames[5]].ToString());
             data[region, 4, timeStampIndex] = SYM_H;
             
-            Debug.Log("loading..." + timeStampIndex + "  SYM " + data[0, 4, timeStampIndex]);
-            
+            // Debug.Log("loading..." +  timeStamp +  "  TimeStampIndex " + timeStampIndex + "  SYM " + data[0, 4, timeStampIndex]);
+
         }
+        
     }
+    
+    
 
     public int DateTimeToIndex(DateTime dateTime)
     {

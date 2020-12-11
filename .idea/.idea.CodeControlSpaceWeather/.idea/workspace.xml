@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e4078ca-3c8d-4740-8dde-9b2e502945b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/stormIndexData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/stormIndexData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LinePlotView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LinePlotView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/stormIndexDataSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/stormIndexDataSet.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,21 +35,20 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AllReportsAtTimeStamp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MC1AggregateReport.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../IA/CodeControlProject/CodeControlProject/Assets/Scenes/MapPlotViewWithLines.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DataUtil.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapPlotControllerWithLines.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LinePlotModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../stormIndexDataSet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StormIndexDataUtil.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MC1Data.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Report.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MC1AllReportsAtTimeStamp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LinePlotView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeControl/Scripts/Source/Controller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../Main.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AggregateReport.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../LeftSlidingBarHandleView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../IA/CodeControlProject/CodeControlProject/Assets/Scenes/MapPlotModelWithLines.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -72,15 +66,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/stormIndexData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/stormIndexDataSet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StormIndexDataUtil.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LinePlotView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StormIndexReport.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StormIndexData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Main.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LinePlotView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StormIndexDataSet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" />
       </list>
     </option>
   </component>
@@ -147,6 +141,8 @@
       <workItem from="1607355080587" duration="1936000" />
       <workItem from="1607358538167" duration="2610000" />
       <workItem from="1607633817739" duration="3303000" />
+      <workItem from="1607637341212" duration="2512000" />
+      <workItem from="1607706854762" duration="4701000" />
     </task>
     <servers />
   </component>

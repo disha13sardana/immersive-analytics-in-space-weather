@@ -20,7 +20,9 @@ namespace Scenes
             int i = 0;
             foreach (KeyValuePair<string, float> timeStampToValuePair in timeStampToValueMap)
             {
-                lr.SetPosition(i, new Vector3(0f, (float) Math.Log(timeStampToValuePair.Value + 1f), (float) i / 60));
+                // lr.SetPosition(i, new Vector3(0f, (float) Math.Log(timeStampToValuePair.Value + 1f), (float) i / 60));
+                // log is not needed
+                lr.SetPosition(i, new Vector3(0f, timeStampToValuePair.Value + 1f, (float) i / 60));
                 i += 1;
             }
         }
