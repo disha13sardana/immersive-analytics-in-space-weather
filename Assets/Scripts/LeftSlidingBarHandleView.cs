@@ -51,7 +51,7 @@ namespace Scenes
 
             int resolution = 120;
 
-            float value;
+            // float value;
             
             // dataa is a dictionary with location as key, and another dictionary as value.
             Dictionary<int, Dictionary<string, float>> dataa = new Dictionary<int, Dictionary<string, float>>
@@ -66,9 +66,9 @@ namespace Scenes
 
                 int timeStampIndex = modelStormIndexDataSet.DateTimeToIndex(currentTimeStamp);
 
-                value = modelStormIndexDataSet.data[0, 4, timeStampIndex];
+                float value = modelStormIndexDataSet.data[0, 4, timeStampIndex];
 
-                // Debug.Log("timestamp = " + currentTimeStamp + "  Index = " + timeStampIndex + " SYM-value =" + value);
+                Debug.Log("timestamp = " + currentTimeStamp + "  Index = " + timeStampIndex + " SYM-value =" + value);
 
                 // StormIndexReport stormIndexReport = new StormIndexReport(currentTimeStamp);
                 // try

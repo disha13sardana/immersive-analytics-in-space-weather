@@ -11,7 +11,7 @@ using UnityEngine;
 public class StormIndexDataSet
 {
     private static int totalDays = 2; // total number of days
-    private static int timeInterval = 5; // in minutes
+    private static int timeInterval = 1; // in minutes
     private static int totalTimeSteps = (60/timeInterval)*24*totalDays;
     
     // public float[,,] data = new float[19, 6, 1441]; // n_regions x n_columns x n_time_steps
@@ -61,8 +61,8 @@ public class StormIndexDataSet
 
     public int DateTimeToIndex(DateTime dateTime)
     {
-        TimeSpan timeSpan = dateTime - earliestTimeStamp;
-        return timeSpan.Minutes / 5;
+        TimeSpan timeSpan = dateTime.Subtract(earliestTimeStamp);
+        return Mathf.RoundToInt((float) timeSpan.TotalMinutes);
     }
 
     public DateTime IndexToDateTime(int index)
