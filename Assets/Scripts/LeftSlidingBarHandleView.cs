@@ -48,7 +48,7 @@ namespace Scenes
             DateTime endTimeStamp = modelStormIndexDataSet.lastTimeStamp;
             DateTime currentTimeStamp = modelStormIndexDataSet.earliestTimeStamp;
             TimeSpan fiveMinutes = modelStormIndexDataSet.timeResolution;
-
+            
             int resolution = 10;
 
             // float value;

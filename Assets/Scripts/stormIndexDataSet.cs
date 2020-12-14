@@ -6,13 +6,13 @@ using Scenes;
 using UnityEngine;
 
 /**
- * This class is intended to hold all the data and the required encapsulation methods related to the MC1 data-set.
+ * This class is intended to hold all the data and the required encapsulation methods related to the Storm Index data-set.
  */
 public class StormIndexDataSet
 {
     private static int totalDays = 2; // total number of days
     private static int timeInterval = 1; // in minutes
-    private static int totalTimeSteps = (60/timeInterval)*24*totalDays + 1;
+    private static int totalTimeSteps = (60/timeInterval)*24*totalDays;
     private static int totalNumberOfRegions = 1; // n_regions 
     private static int totalNUmberOfColumns = 5; // n_columns
     
