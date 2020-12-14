@@ -7,8 +7,11 @@ namespace Scenes
     public class LinePlotView : MonoBehaviour
     {
         private DateTime startDateTime = new DateTime(2011, 10, 24, 00, 00, 00);
-        float opacity = .5f;
 
+        float opacity = .7f;
+
+        int resolution = 10;
+        
         public void PlotData(Dictionary<string, float> timeStampToValueMap, float lineWidth)
         {
             LineRenderer lr = GetComponent<LineRenderer>();
@@ -17,12 +20,20 @@ namespace Scenes
             lr.useWorldSpace = false;
             lr.colorGradient = ComputeGradient(opacity);
 
+            Debug.Log("   timeStampToValueMap   :" + timeStampToValueMap.Count);
+            
             int i = 0;
+            
+            //Source: https://catlikecoding.com/unity/tutorials/basics/building-a-graph/
+            
             foreach (KeyValuePair<string, float> timeStampToValuePair in timeStampToValueMap)
             {
                 // lr.SetPosition(i, new Vector3(0f, (float) Math.Log(timeStampToValuePair.Value + 1f), (float) i / 60));
                 // log is not needed
-                lr.SetPosition(i, new Vector3(0f, timeStampToValuePair.Value + 1f, (float) i / 60));
+                
+                // z = float i/60 because we need to scale the data points. 60 because resolution=120 , so half the scale: 120/2 = 60
+                // idk why y coordinate has a + 1f. 
+                lr.SetPosition(i, new Vector3(0f, timeStampToValuePair.Value + 1f, (float) i / (resolution/2)));
                 i += 1;
             }
         }

@@ -12,10 +12,12 @@ public class StormIndexDataSet
 {
     private static int totalDays = 2; // total number of days
     private static int timeInterval = 1; // in minutes
-    private static int totalTimeSteps = (60/timeInterval)*24*totalDays;
+    private static int totalTimeSteps = (60/timeInterval)*24*totalDays + 1;
+    private static int totalNumberOfRegions = 1; // n_regions 
+    private static int totalNUmberOfColumns = 5; // n_columns
     
     // public float[,,] data = new float[19, 6, 1441]; // n_regions x n_columns x n_time_steps
-    public float[,,] data = new float[1, 5, totalTimeSteps]; // n_regions x n_columns x n_time_steps
+    public float[,,] data = new float[totalNumberOfRegions, totalNUmberOfColumns, totalTimeSteps]; // n_regions x n_columns x n_time_steps
     
     public TimeSpan timeResolution = TimeSpan.FromMinutes(5);
     public DateTime earliestTimeStamp = new DateTime(2011, 10, 24, 00, 00, 00);

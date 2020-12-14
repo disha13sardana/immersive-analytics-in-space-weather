@@ -49,7 +49,7 @@ namespace Scenes
             DateTime currentTimeStamp = modelStormIndexDataSet.earliestTimeStamp;
             TimeSpan fiveMinutes = modelStormIndexDataSet.timeResolution;
 
-            int resolution = 120;
+            int resolution = 10;
 
             // float value;
             
@@ -68,7 +68,7 @@ namespace Scenes
 
                 float value = modelStormIndexDataSet.data[0, 4, timeStampIndex];
 
-                Debug.Log("timestamp = " + currentTimeStamp + "  Index = " + timeStampIndex + " SYM-value =" + value);
+                // Debug.Log("timestamp = " + currentTimeStamp + "  Index = " + timeStampIndex + " SYM-value =" + value);
 
                 // StormIndexReport stormIndexReport = new StormIndexReport(currentTimeStamp);
                 // try
