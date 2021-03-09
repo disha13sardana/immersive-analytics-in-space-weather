@@ -127,6 +127,9 @@
           <e p="CSVReader.cs" t="Include" />
           <e p="CSVUtil.cs" t="Include" />
           <e p="DataUtil.cs" t="Include" />
+          <e p="EarthSphereController.cs" t="Include" />
+          <e p="EarthSphereModel.cs" t="Include" />
+          <e p="EarthSphereView.cs" t="Include" />
           <e p="LeftSlidingBarHandleController.cs" t="Include" />
           <e p="LeftSlidingBarHandleModel.cs" t="Include" />
           <e p="LeftSlidingBarHandleView.cs" t="Include" />

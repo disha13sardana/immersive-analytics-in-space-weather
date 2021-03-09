@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e4078ca-3c8d-4740-8dde-9b2e502945b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LinePlotView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LinePlotView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/stormIndexDataSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/stormIndexDataSet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/LinePlotPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/LinePlotPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/RightSlidingBarHandle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RightSlidingBarHandle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +50,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/CodeControl/Scripts/Source/Controller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AggregateReport.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../IA/CodeControlProject/CodeControlProject/Assets/Scenes/MapPlotModelWithLines.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EarthSphereView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EarthSphereController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EarthSphereModel.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -72,10 +75,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RightSlidingBarHandleModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Main.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LinePlotView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LeftSlidingBarHandleView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StormIndexDataSet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MapPlotViewCmvSphere.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EarthSphereView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EarthSphereModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EarthSphereController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Main.cs" />
       </list>
     </option>
   </component>
@@ -149,6 +156,8 @@
       <workItem from="1607958162022" duration="5672000" />
       <workItem from="1607974443628" duration="3472000" />
       <workItem from="1607978423984" duration="2083000" />
+      <workItem from="1614282535277" duration="925000" />
+      <workItem from="1615314428044" duration="3218000" />
     </task>
     <servers />
   </component>
@@ -171,14 +180,9 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="233" y="73" key="Rider.ProjectTemplateDialog.Size" timestamp="1604865415813">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="619" y="209" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1615314587456">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="233" y="73" key="Rider.ProjectTemplateDialog.Size/0.0.1280.680/-1920.-185.1920.1040@0.0.1280.680" timestamp="1604865415813" />
-    <state x="233" y="73" key="Rider.ProjectTemplateDialog.Size/0.0.1280.680/1920.4.1920.1040@0.0.1280.680" timestamp="1601845007422" />
-    <state x="357" y="45" key="VCS.ChangeListViewerDialog" timestamp="1602356945453">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="357" y="45" key="VCS.ChangeListViewerDialog/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1602356945453" />
+    <state x="619" y="209" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.170.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1615314587456" />
   </component>
 </project>
