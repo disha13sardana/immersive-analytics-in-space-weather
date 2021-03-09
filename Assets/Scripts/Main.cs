@@ -22,7 +22,7 @@ namespace Scenes
             // mc1Data = new Mc1Data("mc1_processed_neg_1");
             
             // pointList = CSVReader.Read("storm_day_sym_index");
-            var stormIndexDataSet = new StormIndexDataSet("storm_day_sym_index");
+            var stormIndexDataSet = new StormIndexDataSet("storm_day_sym_index_2011");
 
             // Left sliding bar handle with line
             LeftSlidingBarHandleModel leftSlidingBarHandleModel = new LeftSlidingBarHandleModel();
