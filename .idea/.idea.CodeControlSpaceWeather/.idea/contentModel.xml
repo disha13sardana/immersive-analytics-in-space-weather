@@ -137,14 +137,6 @@
           <e p="LinePlotModel.cs" t="Include" />
           <e p="LinePlotView.cs" t="Include" />
           <e p="Main.cs" t="Include" />
-          <e p="MapPlotControllerWithLines.cs" t="Include" />
-          <e p="MapPlotModelWithLines.cs" t="Include" />
-          <e p="MapPlotViewWithLines.cs" t="Include" />
-          <e p="MC1AggregateReport.cs" t="Include" />
-          <e p="MC1AllReportsAtTimeStamp.cs" t="Include" />
-          <e p="MC1Data.cs" t="Include" />
-          <e p="MC1DataSet.cs" t="Include" />
-          <e p="MC1Report.cs" t="Include" />
           <e p="Report.cs" t="Include" />
           <e p="RightSlidingBarHandleController.cs" t="Include" />
           <e p="RightSlidingBarHandleModel.cs" t="Include" />
