@@ -49,17 +49,17 @@ namespace Scenes
 
             values = new List<int>();
 
-            var doy = DataUtil.ParseToInt(report["DOY"]);
+            var doy = StormIndexDataUtil.ParseToInt(report["DOY"]);
             values.Add(doy);
-            var asyD = DataUtil.ParseToInt(report["ASY_D"]);
+            var asyD = StormIndexDataUtil.ParseToInt(report["ASY_D"]);
             values.Add(asyD);
-            var asyH = DataUtil.ParseToInt(report["ASY_H"]);
+            var asyH = StormIndexDataUtil.ParseToInt(report["ASY_H"]);
             values.Add(asyH);
-            var symD = DataUtil.ParseToInt(report["SYM_D"]);
+            var symD = StormIndexDataUtil.ParseToInt(report["SYM_D"]);
             values.Add(symD);
-            var symH = DataUtil.ParseToInt(report["SYM_H"]);
+            var symH = StormIndexDataUtil.ParseToInt(report["SYM_H"]);
             values.Add(symH);
-            var location = DataUtil.ParseToInt(report["Location"]);
+            var location = StormIndexDataUtil.ParseToInt(report["Location"]);
             values.Add(location);
         }
 
