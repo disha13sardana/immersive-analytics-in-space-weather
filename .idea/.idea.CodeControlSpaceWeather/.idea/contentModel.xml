@@ -126,6 +126,10 @@
           <e p="AllReportsAtTimeStamp.cs" t="Include" />
           <e p="CSVReader.cs" t="Include" />
           <e p="CSVUtil.cs" t="Include" />
+          <e p="DataPointController.cs" t="Include" />
+          <e p="DataPointMessage.cs" t="Include" />
+          <e p="DataPointModel.cs" t="Include" />
+          <e p="DataPointView.cs" t="Include" />
           <e p="EarthSphereController.cs" t="Include" />
           <e p="EarthSphereModel.cs" t="Include" />
           <e p="EarthSphereView.cs" t="Include" />
