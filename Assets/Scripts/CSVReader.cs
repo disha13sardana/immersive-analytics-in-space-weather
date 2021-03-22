@@ -14,7 +14,15 @@ public class CSVReader
     static string LINE_SPLIT_RE = @"\r\n|\n\r|\n|\r"; // Define line delimiters, regular experession craziness
     static char[] TRIM_CHARS = { '\"' };
 
-    public static List<Dictionary<string, object>> Read(string file) //Declare method
+    // Added by shw
+    public int numColumns = 0;
+    public int numRegions = 0;
+    public DateTime firstTime;
+    public DateTime lastTime;
+    public int timeIntervalMinutes = 0;
+    public int totalDays = 0;
+
+    public List<Dictionary<string, object>> Read(string file) //Declare method
     {
         //Debug.Log("CSVReader is reading " + file); // Print filename, make sure parsed correctly
 
@@ -29,6 +37,19 @@ public class CSVReader
         if (lines.Length <= 1) return list; //Check that there is more than one line
 
         var header = Regex.Split(lines[0], SPLIT_RE); //Split header (element 0)
+        this.numColumns = (int)header.Length;
+
+        this.firstTime = DateTime.Parse(Regex.Split(lines[1], SPLIT_RE)[0]);
+        DateTime secondTime = DateTime.Parse(Regex.Split(lines[2], SPLIT_RE)[0]);
+        // Self explanatory
+        timeIntervalMinutes = secondTime.Minute - firstTime.Minute;
+        // Get the last date. If newline at end, get length - 2
+        if (lines[lines.Length - 1].Length == 0)
+            this.lastTime = DateTime.Parse(Regex.Split(lines[lines.Length - 2], SPLIT_RE)[0]);
+        else
+            this.lastTime = DateTime.Parse(Regex.Split(lines[lines.Length - 1], SPLIT_RE)[0]);
+        // day - day plus one (always one day)
+        this.totalDays = lastTime.Day - firstTime.Day + 1;
 
         // Loops through lines
         for (var i = 1; i < lines.Length; i++)
@@ -42,6 +63,7 @@ public class CSVReader
             // Loops through every value
             for (var j = 0; j < header.Length && j < values.Length; j++)
             {
+                if (j == header.Length - 1) numRegions = Math.Max(int.Parse(values[j]), numRegions);
                 string value = values[j]; // Set local variable value
                 value = value.TrimStart(TRIM_CHARS).TrimEnd(TRIM_CHARS).Replace("\\", ""); // Trim characters
                 object finalvalue = value; //set final value

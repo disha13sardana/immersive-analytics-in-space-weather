@@ -10,50 +10,58 @@ using UnityEngine;
  */
 public class StormIndexDataSet
 {
-    private static int totalDays = 2; // total number of days
-    private static int timeInterval = 1; // in minutes
-    private static int totalTimeSteps = (60/timeInterval)*24*totalDays;
-    private static int totalNumberOfRegions = 1; // n_regions 
-    private static int totalNUmberOfColumns = 5; // n_columns
-    
-    // public float[,,] data = new float[19, 6, 1441]; // n_regions x n_columns x n_time_steps
-    public float[,,] data = new float[totalNumberOfRegions, totalNUmberOfColumns, totalTimeSteps]; // n_regions x n_columns x n_time_steps
-    
+    // TODO Make me read from dataset
+    private int totalDays; // total number of days
+    private int timeInterval; // in minutes
+    private int totalTimeSteps;
+    public int totalNumberOfRegions;
+    public int totalNUmberOfColumns;
+    public float[,,] data;
     public TimeSpan timeResolution = TimeSpan.FromMinutes(5);
-    public DateTime earliestTimeStamp = new DateTime(2011, 10, 24, 00, 00, 00);
-    public DateTime lastTimeStamp = new DateTime(2011, 10, 25, 23, 59, 00);
-    // public DateTime lastTimeStamp = new DateTime(2011, 10, 24, 01, 00, 00);
+    // TODO Make me analysze from Dataset or GUI
+    public DateTime earliestTimeStamp;
+    public DateTime lastTimeStamp;
     
     
     public StormIndexDataSet(string fileName)
     {
-        List<Dictionary<string, object>> pointList = CSVReader.Read(fileName);
+        CSVReader csvReader = new CSVReader();
+        // TODO So the list from main is irrelevant and read as this anyway
+        List<Dictionary<string, object>> pointList = csvReader.Read(fileName);
+
+        // Get info from csvReader
+        totalNumberOfRegions = csvReader.numRegions;//numberOfRegions;
+        totalNUmberOfColumns = csvReader.numColumns - 2; // -2 bc first num and last region
+        timeInterval = csvReader.timeIntervalMinutes;
+        earliestTimeStamp = csvReader.firstTime;
+        lastTimeStamp = csvReader.lastTime;
+        this.totalDays = csvReader.totalDays;
+
+        totalTimeSteps = (60/timeInterval)*24*totalDays;
+
+        data = new float[totalNumberOfRegions, totalNUmberOfColumns, totalTimeSteps];
+        
+        //pointList.
         for (int i = 0; i < pointList.Count; i++)
         {
             Dictionary<string, object> report = pointList[i];
-
-            DateTime timeStamp = DateTime.Parse(report[StormIndexDataUtil.StormIndexColumnNames[0]].ToString());
+            DateTime timeStamp;
+            // issue between 'DateTime' and 'Datetime' header... temp solution is try both
+            try {
+                timeStamp = DateTime.Parse(report[StormIndexDataUtil.StormIndexColumnNames[0]].ToString());
+            } catch (KeyNotFoundException e) {
+                timeStamp = DateTime.Parse(report["Datetime"].ToString());
+            }
             
             int timeStampIndex = DateTimeToIndex(timeStamp);
 
-            int region = Int32.Parse(report[StormIndexDataUtil.StormIndexColumnNames[6]].ToString()) - 1;
+            // I think 6 should be numCOlumns + 1
+            // TODO Check last column for region.
+            int region = Int32.Parse(report[StormIndexDataUtil.StormIndexColumnNames[totalNUmberOfColumns + 1]].ToString()) - 1; // num columns - 2 + 1
 
-            float DOY = float.Parse(report[StormIndexDataUtil.StormIndexColumnNames[1]].ToString());
-            data[region, 0, timeStampIndex] = DOY;
-            
-            float ASY_D = float.Parse(report[StormIndexDataUtil.StormIndexColumnNames[2]].ToString());
-            data[region, 1, timeStampIndex] = ASY_D;
-            
-            float ASY_H = float.Parse(report[StormIndexDataUtil.StormIndexColumnNames[3]].ToString());
-            data[region, 2, timeStampIndex] = ASY_H;
-            
-            float SYM_D = float.Parse(report[StormIndexDataUtil.StormIndexColumnNames[4]].ToString());
-            data[region, 3, timeStampIndex] = SYM_D;
-            
-            float SYM_H = float.Parse(report[StormIndexDataUtil.StormIndexColumnNames[5]].ToString());
-            data[region, 4, timeStampIndex] = SYM_H;
-            
-            // Debug.Log("loading..." +  timeStamp +  "  TimeStampIndex " + timeStampIndex + "  SYM " + data[0, 4, timeStampIndex]);
+            for (int j = 0; j < totalNUmberOfColumns; j++) {
+                data[region, j, timeStampIndex] = float.Parse(report[StormIndexDataUtil.StormIndexColumnNames[j+1]].ToString());
+            }
 
         }
         

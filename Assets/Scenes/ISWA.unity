@@ -150,6 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 181c0aa42d6a88e4eb1f4606279b4508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CMVScale: 0.3
+  stormIndexDataSetName: storm_day_sym_index_2015
 --- !u!4 &380813669
 Transform:
   m_ObjectHideFlags: 0
