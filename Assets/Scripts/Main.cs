@@ -9,6 +9,7 @@ namespace Scenes
     {
         private LeftSlidingBarHandleController leftSlidingBarHandleController;
         private RightSlidingBarHandleController rightSlidingBarHandleController;
+        private EarthSphereController earthSphereController;
         
         private List<Dictionary<string, object>> pointList;
         // private StormIndexData stormIndexData;
@@ -43,7 +44,7 @@ namespace Scenes
             // Right sliding bar handle
             RightSlidingBarHandleModel rightSlidingBarHandleModel = new RightSlidingBarHandleModel();
             rightSlidingBarHandleModel.SerialId = 0;
-            rightSlidingBarHandleModel.CenterPosition = new Vector3(0f, 10f, -6f);
+            rightSlidingBarHandleModel.CenterPosition = new Vector3(-4.5f, -6.6f, -58f);
             rightSlidingBarHandleModel.Scale = new Vector3(1f,0.1f,1f);
             rightSlidingBarHandleModel.Rotation = new Vector3(90f,180f,0f);
             rightSlidingBarHandleModel.StormIndexDataSet = stormIndexDataSet;
@@ -54,6 +55,23 @@ namespace Scenes
             // var transformEulerAngles = transform1.eulerAngles;
             // transformEulerAngles.y = -90;
             // transform1.eulerAngles = transformEulerAngles;
+            
+            // Earth (sphere) 
+            EarthSphereModel earthSphereModel = new EarthSphereModel();
+            earthSphereModel.SerialId = 0;
+            earthSphereModel.CenterPosition = new Vector3(-30f, 0f, 0f);
+            earthSphereModel.Scale = new Vector3(5f, 5f, 5f);
+            earthSphereModel.Rotation = new Vector3(90f, 0f, 90f);
+            earthSphereModel.PointList = pointList;
+            // earthSphereModel.Mc1Data = mc1Data;
+            earthSphereModel.ScaleDataColumnIndex = 1;
+            earthSphereModel.ColorDataColumnIndex = 1;
+            earthSphereModel.AmbientAudioDataColumnIndex = 1;
+            earthSphereModel.PlotName = "TEC";
+            earthSphereModel.visibility = false;
+            earthSphereController =
+                Controller.Instantiate<EarthSphereController>(EarthSphereModel.PrefabName,
+                    earthSphereModel, transform);
         }
 
         // Update is called once per frame
