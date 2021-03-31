@@ -28,7 +28,6 @@ public class StormIndexDataSet
         CSVReader csvReader = new CSVReader();
         // TODO So the list from main is irrelevant and read as this anyway
         List<Dictionary<string, object>> pointList = csvReader.Read(fileName);
-
         // Get info from csvReader
         totalNumberOfRegions = csvReader.numRegions;//numberOfRegions;
         totalNUmberOfColumns = csvReader.numColumns - 2; // -2 bc first num and last region
@@ -37,9 +36,12 @@ public class StormIndexDataSet
         lastTimeStamp = csvReader.lastTime;
         this.totalDays = csvReader.totalDays;
 
-        totalTimeSteps = (60/timeInterval)*24*totalDays;
-
+        if (timeInterval != 0) totalTimeSteps = (60/timeInterval)*24*totalDays;
+        else {
+            totalTimeSteps = 1;
+        }
         data = new float[totalNumberOfRegions, totalNUmberOfColumns, totalTimeSteps];
+
         
         //pointList.
         for (int i = 0; i < pointList.Count; i++)
@@ -49,19 +51,25 @@ public class StormIndexDataSet
             // issue between 'DateTime' and 'Datetime' header... temp solution is try both
             try {
                 timeStamp = DateTime.Parse(report[StormIndexDataUtil.StormIndexColumnNames[0]].ToString());
-            } catch (KeyNotFoundException e) {
-                timeStamp = DateTime.Parse(report["Datetime"].ToString());
+            } catch (KeyNotFoundException e1) {
+                try {
+                    timeStamp = DateTime.Parse(report["Datetime"].ToString());
+                }
+                catch (KeyNotFoundException e2) {
+                    timeStamp = DateTime.Parse(report["TimeStamp"].ToString());
+                }
             }
             
             int timeStampIndex = DateTimeToIndex(timeStamp);
 
-            // I think 6 should be numCOlumns + 1
             // TODO Check last column for region.
             int region = Int32.Parse(report[StormIndexDataUtil.StormIndexColumnNames[totalNUmberOfColumns + 1]].ToString()) - 1; // num columns - 2 + 1
 
+
             for (int j = 0; j < totalNUmberOfColumns; j++) {
-                data[region, j, timeStampIndex] = float.Parse(report[StormIndexDataUtil.StormIndexColumnNames[j+1]].ToString());
+                data[region, j, timeStampIndex] = float.Parse(report[StormIndexDataUtil.StormIndexColumnNames[j+1]].ToString());          
             }
+
 
         }
         
