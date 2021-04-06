@@ -30,7 +30,7 @@ namespace Scenes
                 lr.SetPosition(i, new Vector3(0f, timeStampToValuePair.Value , (float) i / (resolution/2)));
                 i += 1;
                 
-                Debug.Log("i:after   " + i + "   timeStampToValuePair   : " + timeStampToValuePair.Value + "  " + timeStampToValuePair.Key);
+                // Debug.Log("i:after   " + i + "   timeStampToValuePair   : " + timeStampToValuePair.Value + "  " + timeStampToValuePair.Key);
             }
         }
 

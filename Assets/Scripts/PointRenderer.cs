@@ -100,10 +100,10 @@ public class PointRenderer : MonoBehaviour
         // Store dictionary keys (column names in CSV) in a list
         List<string> columnList = new List<string>(pointList[1].Keys);
 
-        Debug.Log("There are " + columnList.Count + " columns in the CSV");
+        //Debug.Log("There are " + columnList.Count + " columns in the CSV");
 
         foreach (string key in columnList)
-            Debug.Log("Column name is " + key);
+            //Debug.Log("Column name is " + key);
 
         // Assign column names according to index indicated in columnList
         xColumnName = columnList[column1];
@@ -216,7 +216,7 @@ public class PointRenderer : MonoBehaviour
             
             var theta = (Convert.ToDouble(pointList[i][xColumnName]));
             var phi = (Convert.ToDouble(pointList[i][yColumnName]));
-            Debug.Log("Phi: "+ phi);
+            // Debug.Log("Phi: "+ phi);
             var R = (Convert.ToDouble(pointList[i][zColumnName]));
             R /= 2;
             
