@@ -141,7 +141,7 @@ public class PointRenderer : MonoBehaviour
         PointHolder = new GameObject("PointHolder");
         PointHolder.transform.parent = realParent.transform;
         PointHolder.transform.localScale = new Vector3(1, 1, 1);
-        PointHolder.transform.localPosition = realParent.transform.position;
+        PointHolder.transform.position = realParent.transform.position;
 
         PointHolder.transform.rotation = realParent.transform.rotation * Quaternion.Euler(7, -94, -2);
 
