@@ -1,0 +1,4 @@
+AudioPluginMsHRTF.dll
+Microsoft.Holographic.AppRemoting.dll
+UnityRemotingWMR.dll
+PerceptionDevice.dll

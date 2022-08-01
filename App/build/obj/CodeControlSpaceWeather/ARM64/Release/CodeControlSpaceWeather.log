@@ -1,0 +1,9 @@
+﻿  pch.cpp
+  App.cpp
+  Main.cpp
+  UnityGenerated.cpp
+C:\Users\disha\Desktop\github\CodeControlSpaceWeather\CodeControlSpaceWeather\App\CodeControlSpaceWeather\App.cpp(26,1): warning C4973: 'Windows::UI::ViewManagement::IApplicationView2::SuppressSystemOverlays::set': marked as deprecated
+C:\Users\disha\Desktop\github\CodeControlSpaceWeather\CodeControlSpaceWeather\App\CodeControlSpaceWeather\App.cpp(26,1): message : Message: 'Use the TryEnterFullScreen method and IsFullScreenMode property instead of SuppressSystemOverlays. For more info, see MSDN.'
+  Generating code
+  Finished generating code
+  CodeControlSpaceWeather.vcxproj -> C:\Users\disha\Desktop\github\CodeControlSpaceWeather\CodeControlSpaceWeather\App\build\bin\ARM64\Release\CodeControlSpaceWeather.exe
