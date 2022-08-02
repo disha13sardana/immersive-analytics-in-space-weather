@@ -5,29 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e4078ca-3c8d-4740-8dde-9b2e502945b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeControlSpaceWeather/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/mc1-reports-data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/mc1-reports-data.csv.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/mc1_clean.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/mc1_clean.csv.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/mc1_processed.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/mc1_processed.csv.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/mc1_processed_neg_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/mc1_processed_neg_1.csv.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/storm_day_sym_index_2011.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/storm_day_sym_index_2011.csv.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/storm_day_sym_index_2015.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/storm_day_sym_index_2015.csv.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ISWA.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ISWA.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeControl/Example/Visuals/Materials/CursorSelect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeControl/Example/Visuals/Materials/CursorSelect.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DataFiles/stormDay_SymIndex_200411.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DataFiles/stormDay_SymIndex_200411.csv.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DataFiles/stormDay_SymIndex_201501.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DataFiles/stormDay_SymIndex_201501.csv.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DataFiles/stormDay_SymIndex_201610.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DataFiles/stormDay_SymIndex_201610.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DataPointPrefab.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DataPointPrefab.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EarthSpherePrefab.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/EarthSpherePrefab.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/LeftSlidingBarHandle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/LeftSlidingBarHandle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/LeftSlidingBarHandle.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/LeftSlidingBarHandle.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/LinePlotPrefab.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/LinePlotPrefab.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/MapPlotPrefabWithLines.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/MapPlotPrefabWithLines.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Point1.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Point1.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/RightSlidingBarHandle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RightSlidingBarHandle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/RightSlidingBarHandle.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RightSlidingBarHandle.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/stormDay_SymIndex_201110.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/stormDay_SymIndex_201110.csv.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +41,6 @@
     <setting file="file://$PROJECT_DIR$/../../../IA/CodeControlProject/CodeControlProject/Assets/Scenes/MapPlotViewWithLines.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeControl/Example/Scripts/Other/TurretCursor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeControl/Scripts/Source/Controller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/LeftSlidingBarHandle.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AggregateReport.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AllReportsAtTimeStamp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CSVReader.cs" root0="FORCE_HIGHLIGHTING" />
@@ -200,6 +197,8 @@
       <workItem from="1616616519264" duration="2193000" />
       <workItem from="1659382416689" duration="1401000" />
       <workItem from="1659398373035" duration="15000" />
+      <workItem from="1659466229178" duration="596000" />
+      <workItem from="1659470225475" duration="441000" />
     </task>
     <servers />
   </component>
