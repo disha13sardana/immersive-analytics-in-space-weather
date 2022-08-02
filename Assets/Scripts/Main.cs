@@ -17,7 +17,7 @@ namespace Scenes
         [SerializeField]
         private float CMVScale = 0.3f;
         [SerializeField]
-        private String stormIndexDataSetName = "storm_day_sym_index";
+        private String stormIndexDataSetName = "DataFiles/stormDay_SymIndex";
 
         void Start()
         {

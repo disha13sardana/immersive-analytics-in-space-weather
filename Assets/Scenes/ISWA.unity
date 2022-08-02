@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CMVScale: 0.3
-  stormIndexDataSetName: storm_day_sym_index_2015
+  stormIndexDataSetName: DataFiles/stormDay_SymIndex_201808
 --- !u!4 &380813669
 Transform:
   m_ObjectHideFlags: 0
