@@ -110,6 +110,7 @@ namespace Scenes
                 linePlotModel.LineWidth = 0.1f;
                 linePlotModel.Rotation = new Vector3(-90f, 0f, 0f);
                 linePlotModel.DataPointScale = Vector3.one / resolution;
+
                 Controller.Instantiate<LinePlotController>(linePlotModel.PrefabName, linePlotModel, transform);
                 
                 // Debug.Log("keyValuePair.Key   " + keyValuePair.Key + "   dataa[keyValuePair.Key]  " + dataa[keyValuePair.Key]);

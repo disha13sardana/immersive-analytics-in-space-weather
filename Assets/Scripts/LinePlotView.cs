@@ -16,22 +16,28 @@ namespace Scenes
         {
             LineRenderer lr = GetComponent<LineRenderer>();
             lr.widthMultiplier = lineWidth;
-            lr.positionCount = timeStampToValueMap.Count;
+            lr.positionCount = timeStampToValueMap.Count+2;
             lr.useWorldSpace = false;
             lr.colorGradient = ComputeGradient(opacity);
-            
+
             //Source: https://catlikecoding.com/unity/tutorials/basics/building-a-graph/
+
+            lr.SetPosition(0, new Vector3(0f, 5f, 0.1f ));
             
-            int i = 0;
+            int i = 1;
             foreach (KeyValuePair<string, float> timeStampToValuePair in timeStampToValueMap)
             {
                 // z = float i/5 because we need to scale the data points.
                 // 5 because resolution = 10 , so half the scale: 10/2 = 5
-                lr.SetPosition(i, new Vector3(0f, timeStampToValuePair.Value , (float) i / (resolution/2)));
+                lr.SetPosition(i, new Vector3(0f, timeStampToValuePair.Value , 0.1f + (float) i / (resolution/2)));
                 i += 1;
                 
-                Debug.Log("i:after   " + i + "   timeStampToValuePair   : " + timeStampToValuePair.Value + "  " + timeStampToValuePair.Key);
+                // Debug.Log("i:after   " + i + "   timeStampToValuePair   : " + timeStampToValuePair.Value + "  " + timeStampToValuePair.Key);
             }
+
+            lr.SetPosition(i, new Vector3(0f, 5f, 0.1f +  (float)i / (resolution / 2)));
+            
+
         }
 
         public void SetPosition(Vector3 position)

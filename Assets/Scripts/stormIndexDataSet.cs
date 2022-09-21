@@ -21,6 +21,7 @@ public class StormIndexDataSet
     // TODO Make me analysze from Dataset or GUI
     public DateTime earliestTimeStamp;
     public DateTime lastTimeStamp;
+    public int dataPointCount;
     
     
     public StormIndexDataSet(string fileName)
@@ -72,6 +73,9 @@ public class StormIndexDataSet
 
 
         }
+
+        dataPointCount = pointList.Count;
+
         
     }
     

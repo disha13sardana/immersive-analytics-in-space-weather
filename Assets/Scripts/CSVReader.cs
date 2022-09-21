@@ -24,7 +24,7 @@ public class CSVReader
 
     public List<Dictionary<string, object>> Read(string file) //Declare method
     {
-        //Debug.Log("CSVReader is reading " + file); // Print filename, make sure parsed correctly
+        // Debug.Log("CSVReader is reading " + file); // Print filename, make sure parsed correctly
 
         var list = new List<Dictionary<string, object>>(); //declare dictionary list
 
@@ -82,9 +82,14 @@ public class CSVReader
                     finalvalue = f;
                 }
                 entry[header[j]] = finalvalue;
+
+                //Debug.Log(header[j] + ' ' + finalvalue);
             }
             list.Add(entry); // Add Dictionary ("entry" variable) to list
         }
+
+        
+
         return list; //Return list
     }
 }
