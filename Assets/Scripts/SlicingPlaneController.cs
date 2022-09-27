@@ -35,22 +35,22 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
         view.SetPosition(model.Position);
         view.SetScale(model.Scale);
         view.SetRotation(model.Rotation);
-//         Message.Send<SlicingPlaneMessage>("slicing_plane_position_changed",
-//             new SlicingPlaneMessage(GetCurrentPositionRatio()));
+            //         Message.Send<SlicingPlaneMessage>("slicing_plane_position_changed",
+            //             new SlicingPlaneMessage(GetCurrentPositionRatio()));
 
-//         float totalSum = 0f;
-//         AllReportsAtTimeStamp allReportsAtTimeStamp = model.Mc1Data.GetData(GetCurrentPositionRatio());
-//         for (int i = 1; i < 20; i++)
-//         {
-//             AggregateReport aggregateReport = allReportsAtTimeStamp.GetAggregateReport(i);
-//             List<float> average = aggregateReport.GetAverage();
-//             float sum = average.Sum(item => item);
-//             totalSum = totalSum + sum;
-//         }
+            //         float totalSum = 0f;
+            //         AllReportsAtTimeStamp allReportsAtTimeStamp = model.Mc1Data.GetData(GetCurrentPositionRatio());
+            //         for (int i = 1; i < 20; i++)
+            //         {
+            //             AggregateReport aggregateReport = allReportsAtTimeStamp.GetAggregateReport(i);
+            //             List<float> average = aggregateReport.GetAverage();
+            //             float sum = average.Sum(item => item);
+            //             totalSum = totalSum + sum;
+            //         }
 
-// //        view.SetPlaneSound(totalSum);
-//         view.SetupPlaneAudio(slicingPlaneAudioClip, totalSum);
-    }
+            // //        view.SetPlaneSound(totalSum);
+            //         view.SetupPlaneAudio(slicingPlaneAudioClip, totalSum);
+        }
 
     public float GetCurrentPositionRatio()
     {
@@ -70,42 +70,62 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
 
     void Update()
     {
-//         if (transform.hasChanged)
-//         {
-//             NumFramesEventNotSent += 1;
-//             if (NumFramesEventNotSent > EmitEventEveryNFrames)
-//             {
-//                 NumFramesEventNotSent = 0;
-//                 Message.Send<SlicingPlaneMessage>("slicing_plane_position_changed",
-//                     new SlicingPlaneMessage(GetCurrentPositionRatio()));
-//             }
+            if (transform.hasChanged)
+            {
+                NumFramesEventNotSent += 1;
+                if (NumFramesEventNotSent > EmitEventEveryNFrames)
+                {
+                    NumFramesEventNotSent = 0;
+                    Message.Send<SlicingPlaneMessage>("slicing_plane_position_changed",
+                        new SlicingPlaneMessage(GetCurrentPositionRatio()));
+                }
 
 
-//             if (!isAudioSourceMuted)
-//             {
-//                 float totalSum = 0f;
-//                 AllReportsAtTimeStamp allReportsAtTimeStamp = model.Mc1Data.GetData(GetCurrentPositionRatio());
-//                 for (int i = 1; i < 20; i++)
-//                 {
-//                     AggregateReport aggregateReport = allReportsAtTimeStamp.GetAggregateReport(i);
-//                     List<float> average = aggregateReport.GetAverage();
-//                     float sum = average.Sum(item => item);
-//                     totalSum = totalSum + sum;
-//                 }
+                //if (!isAudioSourceMuted)
+                //{
+                //    float totalSum = 0f;
+                //    AllReportsAtTimeStamp allReportsAtTimeStamp = model.Mc1Data.GetData(GetCurrentPositionRatio());
+                //    for (int i = 1; i < 20; i++)
+                //    {
+                //        AggregateReport aggregateReport = allReportsAtTimeStamp.GetAggregateReport(i);
+                //        List<float> average = aggregateReport.GetAverage();
+                //        float sum = average.Sum(item => item);
+                //        totalSum = totalSum + sum;
+                //    }
 
-// //                view.SetPlaneSound(totalSum);
-//                 view.SetPlaneSoundPitch(totalSum);
-//             }
+                //    //                view.SetPlaneSound(totalSum);
+                //    view.SetPlaneSoundPitch(totalSum);
+                //}
 
 
-//             transform.hasChanged = false;
-//         }
+                transform.hasChanged = false;
+            }
 
-        // AllReportsAtTimeStamp allReportsAtTimeStamp2 = model.Mc1Data.GetData(GetCurrentPositionRatio());
-        // DateTime dateTime = allReportsAtTimeStamp2.GetDateTime();
-        // view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture));
-        view.SetPlotLabel("Label to be Added.");
-    }
+
+            //AllReportsAtTimeStamp allReportsAtTimeStamp2 = model.Mc1Data.GetData(GetCurrentPositionRatio());
+            //DateTime dateTime = allReportsAtTimeStamp2.GetDateTime();SetPlotLabel
+            //view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture));
+
+            float currentLocation = GetCurrentPositionRatio();
+            int currentLocationIndex = (int) (currentLocation * model.StormIndexDataSet.dataPointCount)  + 1;
+            
+
+            DateTime dateTime = model.StormIndexDataSet.IndexToDateTime( currentLocationIndex );
+
+            view.SetPlotLabel("On date: " + dateTime.ToString(CultureInfo.InvariantCulture) + " SYM-H is " + model.StormIndexDataSet.data[0,4, currentLocationIndex]);
+                //+ " DateTime  " + model.StormIndexDataSet.data[0, 0, currentLocationIndex]
+                //+ " SH  " + model.StormIndexDataSet.data[0, 5, currentLocationIndex]);
+            
+            //Debug.Log("=============================" + model.StormIndexDataSet.data);
+            //+ " DateTime  " + model.StormIndexDataSet.data[1, 0, currentLocationIndex] +
+            //" DOY  " + model.StormIndexDataSet.data[1, 1, currentLocationIndex] +
+            //" AD  " + model.StormIndexDataSet.data[1, 2, currentLocationIndex]
+            // + " AH  " + model.StormIndexDataSet.data[1, 3, currentLocationIndex]
+            //  + " SD  " + model.StormIndexDataSet.data[1, 4, currentLocationIndex]
+            //+ " SH  " + model.StormIndexDataSet.data[1, 5, currentLocationIndex]
+            // + " Location  " + model.StormIndexDataSet.data[1, 6, currentLocationIndex]);
+            // view.SetPlotLabel("Label to be Added.");
+        }
 
     void LateUpdate()
     {

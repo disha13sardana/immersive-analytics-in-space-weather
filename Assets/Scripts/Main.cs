@@ -39,7 +39,7 @@ namespace Scenes
             leftSlidingBarHandleModel.Scale = new Vector3(1f,0.1f,1f);
             leftSlidingBarHandleModel.Rotation = new Vector3(90f,180f,0f);
             leftSlidingBarHandleModel.StormIndexDataSet = stormIndexDataSet;
-            leftSlidingBarHandleModel.Label = "SYM-H Index (nT) at 00:00:00 hrs";
+            leftSlidingBarHandleModel.Label = "SYM-H Index (nT) at " + stormIndexDataSet.earliestTimeStamp;
             leftSlidingBarHandleController = Controller.Instantiate<LeftSlidingBarHandleController>(
                 LeftSlidingBarHandleModel.PrefabName, leftSlidingBarHandleModel, transform);
             
@@ -53,7 +53,7 @@ namespace Scenes
             rightSlidingBarHandleModel.Scale = new Vector3(1f,0.1f,1f);
             rightSlidingBarHandleModel.Rotation = new Vector3(90f,0f,0f);
             rightSlidingBarHandleModel.StormIndexDataSet = stormIndexDataSet;
-            rightSlidingBarHandleModel.Label = "SYM-H Index (nT) at 23:59:00 hrs";
+            rightSlidingBarHandleModel.Label = "SYM-H Index (nT) at " + stormIndexDataSet.lastTimeStamp;
             rightSlidingBarHandleController = Controller.Instantiate<RightSlidingBarHandleController>(
                 RightSlidingBarHandleModel.PrefabName, rightSlidingBarHandleModel, transform);
             // var transform1 = transform;

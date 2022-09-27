@@ -66,9 +66,12 @@ public class StormIndexDataSet
             // TODO Check last column for region.
             int region = Int32.Parse(report[StormIndexDataUtil.StormIndexColumnNames[totalNUmberOfColumns + 1]].ToString()) - 1; // num columns - 2 + 1
 
+            Debug.Log("Our Region" + region);
 
             for (int j = 0; j < totalNUmberOfColumns; j++) {
-                data[region, j, timeStampIndex] = float.Parse(report[StormIndexDataUtil.StormIndexColumnNames[j+1]].ToString());          
+                
+                data[region, j, timeStampIndex] = float.Parse(report[StormIndexDataUtil.StormIndexColumnNames[j+1]].ToString());
+                Debug.Log(region + " " + j + " " + timeStampIndex + " = " + data[region, j, timeStampIndex]);
             }
 
 
@@ -89,7 +92,7 @@ public class StormIndexDataSet
 
     public DateTime IndexToDateTime(int index)
     {
-        TimeSpan timeSpan = TimeSpan.FromMinutes(index * 5);
+        TimeSpan timeSpan = TimeSpan.FromMinutes(index * 1);
         return earliestTimeStamp + timeSpan;
     }
 }
