@@ -107,7 +107,7 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
             //view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture));
 
             float currentLocation = GetCurrentPositionRatio();
-            int currentLocationIndex = (int) (currentLocation * model.StormIndexDataSet.dataPointCount)  + 1;
+            int currentLocationIndex = (int) (currentLocation * model.StormIndexDataSet.dataPointCount)  + 8;
             
 
             DateTime dateTime = model.StormIndexDataSet.IndexToDateTime( currentLocationIndex );
