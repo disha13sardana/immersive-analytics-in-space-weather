@@ -107,7 +107,7 @@ namespace Scenes
                 linePlotModel.OriginPosition.y = linePlotModel.OriginPosition.y - 0.5f;
                 linePlotModel.Scale = new Vector3(0.2f, 0.15f, 5f);
                 linePlotModel.Data = dataa[keyValuePair.Key];
-                linePlotModel.LineWidth = 0.1f;
+                linePlotModel.LineWidth = 0.01f;
                 linePlotModel.Rotation = new Vector3(-90f, 0f, 0f);
                 linePlotModel.DataPointScale = Vector3.one / resolution;
 

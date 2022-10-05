@@ -1,0 +1,249 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f18fec9b55c4f818e284af454161962, type: 3}
+  m_Name: CodeControlMixedRealitySpeechCommandsProfile
+  m_EditorClassIdentifier: 
+  isCustomProfile: 1
+  startBehavior: 0
+  recognitionConfidenceLevel: 2
+  speechCommands:
+  - localizationKey: 
+    keyword: Show Histogram
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Hide Histogram
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Show Scatter plot
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Hide Scatter plot
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Show Bar chart
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Hide Bar chart
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Task One
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Task Two
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Task Three
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Task Four
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Task Five
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Task Six
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Task Seven
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Task Eight
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Task Nine
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Show keyboard
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Hode keyboard
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Follow me
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Save
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Close
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Show scene one
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Show scene two
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Show Scene Three
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Show Scene Four
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Show Scene Five
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Show Scene Six
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Show Scene Seven
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Show Scene Eight
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Show Scene Nine
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Show Scene Ten
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: SCene Reset
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Show Cube
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Select Data
+    keyCode: 0
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
