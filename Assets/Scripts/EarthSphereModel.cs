@@ -9,7 +9,7 @@ namespace Scenes
         public const string PrefabName = "EarthSpherePrefab";
         public int SerialId = 0;
         public Vector3 CenterPosition = new Vector3();
-        public Vector3 Scale = new Vector3(10f, 0.1f, 10f);
+        public Vector3 Scale = new Vector3(1f, 1f, 1f);
         public Vector3 Rotation = Vector3.zero;
         public Vector3 DataSphereScale = new Vector3(1f, 1f, 1f);
         public Vector3 MaxSphereScale = Vector3.one;

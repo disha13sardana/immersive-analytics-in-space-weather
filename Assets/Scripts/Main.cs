@@ -67,7 +67,7 @@ namespace Scenes
             slicingPlaneModel.SerialId = 0;
             //rightSlidingBarHandleModel.CenterPosition = new Vector3(-4.5f, -6.6f, -58f);
             slicingPlaneModel.Position = new Vector3(0f, 10f, -45f);
-            slicingPlaneModel.Scale = new Vector3(0.2f, 0.1f, 0.2f);
+            slicingPlaneModel.Scale = new Vector3(0.5f, 0.5f, 0.5f);
             slicingPlaneModel.Rotation = new Vector3(90f, 0f, -90f);
             slicingPlaneModel.StormIndexDataSet = stormIndexDataSet;
             slicingPlaneModel.lowerZBound = leftSlidingBarHandleModel.CenterPosition.z;
@@ -75,22 +75,22 @@ namespace Scenes
             // slicingPlaneModel.Label = "SYM-H Index (nT) at 23:59:00 hrs";
             slicingPlaneController = Controller.Instantiate<SlicingPlaneController>(SlicingPlaneModel.PrefabName, slicingPlaneModel, transform);
 
-            // // Earth (sphere) 
-            // EarthSphereModel earthSphereModel = new EarthSphereModel();
-            // earthSphereModel.SerialId = 0;
-            // earthSphereModel.CenterPosition = new Vector3(-10f, 0f, 20f);
-            // earthSphereModel.Scale = new Vector3(5f, 5f, 5f);
-            // earthSphereModel.Rotation = new Vector3(90f, 0f, 90f);
-            // earthSphereModel.PointList = pointList;
-            // // earthSphereModel.Mc1Data = mc1Data;
-            // earthSphereModel.ScaleDataColumnIndex = 1;
-            // earthSphereModel.ColorDataColumnIndex = 1;
-            // earthSphereModel.AmbientAudioDataColumnIndex = 1;
-            // earthSphereModel.PlotName = "TEC";
-            // earthSphereModel.visibility = false;
-            // earthSphereController =
-            //     Controller.Instantiate<EarthSphereController>(EarthSphereModel.PrefabName,
-            //         earthSphereModel, transform);
+            //// Earth (sphere) 
+            //EarthSphereModel earthSphereModel = new EarthSphereModel();
+            //earthSphereModel.SerialId = 0;
+            //earthSphereModel.CenterPosition = new Vector3(0f, 0f, 20f);
+            //earthSphereModel.Scale = new Vector3(0.06f, 0.06f, 0.06f);
+            //earthSphereModel.Rotation = new Vector3(90f, 0f, 90f);
+            //earthSphereModel.PointList = pointList;
+            //// earthSphereModel.Mc1Data = mc1Data;
+            //earthSphereModel.ScaleDataColumnIndex = 1;
+            //earthSphereModel.ColorDataColumnIndex = 1;
+            //earthSphereModel.AmbientAudioDataColumnIndex = 1;
+            //earthSphereModel.PlotName = "TEC";
+            //earthSphereModel.visibility = false;
+            //earthSphereController =
+            //    Controller.Instantiate<EarthSphereController>(EarthSphereModel.PrefabName,
+            //        earthSphereModel, transform);
 
 
         }

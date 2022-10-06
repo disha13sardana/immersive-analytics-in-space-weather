@@ -36,7 +36,7 @@ Transform:
   m_GameObject: {fileID: 881711105125183146}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 5.4, y: -0, z: 0.1}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4725284084946685880}
   - {fileID: 1778185219881622833}
@@ -422,8 +422,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067871440594537453}
   m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: -15, z: -18}
-  m_LocalScale: {x: 5, y: 4, z: 0.7000003}
+  m_LocalPosition: {x: -6.5, y: 2.7, z: -12}
+  m_LocalScale: {x: 2, y: 2, z: 0.7000003}
   m_Children: []
   m_Father: {fileID: 3149261185677305328}
   m_RootOrder: 0
@@ -475,9 +475,9 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067871440594537453}
-  m_Text: 'Hello World
+  m_Text: '00/00/0000
 
-    Hello World'
+    SYM-H is -100'
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -519,7 +519,7 @@ Transform:
   m_GameObject: {fileID: 3367835699888413760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 1, z: 450}
+  m_LocalScale: {x: 0.2, y: 0.1, z: 450}
   m_Children: []
   m_Father: {fileID: 3149261185677305328}
   m_RootOrder: 4
