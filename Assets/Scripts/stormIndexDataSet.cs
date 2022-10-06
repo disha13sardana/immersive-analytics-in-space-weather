@@ -17,7 +17,7 @@ public class StormIndexDataSet
     public int totalNumberOfRegions;
     public int totalNUmberOfColumns;
     public float[,,] data;
-    public TimeSpan timeResolution = TimeSpan.FromMinutes(5);
+    public TimeSpan timeResolution = TimeSpan.FromMinutes(1);
     // TODO Make me analysze from Dataset or GUI
     public DateTime earliestTimeStamp;
     public DateTime lastTimeStamp;

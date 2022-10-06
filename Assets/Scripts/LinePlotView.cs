@@ -10,7 +10,7 @@ namespace Scenes
 
         float opacity = .7f;
 
-        int resolution = 10;
+        int resolution = 50;
         
         public void PlotData(Dictionary<string, float> timeStampToValueMap, float lineWidth)
         {
@@ -22,7 +22,7 @@ namespace Scenes
 
             //Source: https://catlikecoding.com/unity/tutorials/basics/building-a-graph/
 
-            lr.SetPosition(0, new Vector3(0f, 5f, 0.1f ));
+            lr.SetPosition(0, new Vector3(0f, 0f, 0.1f ));
             
             int i = 1;
             foreach (KeyValuePair<string, float> timeStampToValuePair in timeStampToValueMap)
@@ -35,7 +35,7 @@ namespace Scenes
                 // Debug.Log("i:after   " + i + "   timeStampToValuePair   : " + timeStampToValuePair.Value + "  " + timeStampToValuePair.Key);
             }
 
-            lr.SetPosition(i, new Vector3(0f, 5f, 0.1f +  (float)i / (resolution / 2)));
+            lr.SetPosition(i, new Vector3(0f, 0f, 0.1f +  (float)i / (resolution / 2)));
             
 
         }

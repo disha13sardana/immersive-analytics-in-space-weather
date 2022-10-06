@@ -49,7 +49,7 @@ namespace Scenes
             DateTime currentTimeStamp = modelStormIndexDataSet.earliestTimeStamp;
             TimeSpan fiveMinutes = modelStormIndexDataSet.timeResolution;
             
-            int resolution = 10;
+            int resolution = 50;
 
             // float value;
             

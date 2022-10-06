@@ -112,7 +112,7 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
 
             DateTime dateTime = model.StormIndexDataSet.IndexToDateTime( currentLocationIndex );
 
-            view.SetPlotLabel("On date: " + dateTime.ToString(CultureInfo.InvariantCulture) + " SYM-H is " + model.StormIndexDataSet.data[0,4, currentLocationIndex]);
+            view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture) + "\nSYM-H is " + model.StormIndexDataSet.data[0,4, currentLocationIndex]);
                 //+ " DateTime  " + model.StormIndexDataSet.data[0, 0, currentLocationIndex]
                 //+ " SH  " + model.StormIndexDataSet.data[0, 5, currentLocationIndex]);
             

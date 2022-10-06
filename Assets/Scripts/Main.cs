@@ -39,7 +39,7 @@ namespace Scenes
             leftSlidingBarHandleModel.Scale = new Vector3(1f,0.1f,1f);
             leftSlidingBarHandleModel.Rotation = new Vector3(90f,180f,0f);
             leftSlidingBarHandleModel.StormIndexDataSet = stormIndexDataSet;
-            leftSlidingBarHandleModel.Label = "SYM-H Index (nT) at " + stormIndexDataSet.earliestTimeStamp;
+            leftSlidingBarHandleModel.Label = "" + stormIndexDataSet.earliestTimeStamp;
             leftSlidingBarHandleController = Controller.Instantiate<LeftSlidingBarHandleController>(
                 LeftSlidingBarHandleModel.PrefabName, leftSlidingBarHandleModel, transform);
             
@@ -53,7 +53,7 @@ namespace Scenes
             rightSlidingBarHandleModel.Scale = new Vector3(1f,0.1f,1f);
             rightSlidingBarHandleModel.Rotation = new Vector3(90f,0f,0f);
             rightSlidingBarHandleModel.StormIndexDataSet = stormIndexDataSet;
-            rightSlidingBarHandleModel.Label = "SYM-H Index (nT) at " + stormIndexDataSet.lastTimeStamp;
+            rightSlidingBarHandleModel.Label = "" + stormIndexDataSet.lastTimeStamp;
             rightSlidingBarHandleController = Controller.Instantiate<RightSlidingBarHandleController>(
                 RightSlidingBarHandleModel.PrefabName, rightSlidingBarHandleModel, transform);
             // var transform1 = transform;
@@ -66,9 +66,9 @@ namespace Scenes
             SlicingPlaneModel slicingPlaneModel = new SlicingPlaneModel();
             slicingPlaneModel.SerialId = 0;
             //rightSlidingBarHandleModel.CenterPosition = new Vector3(-4.5f, -6.6f, -58f);
-            slicingPlaneModel.Position = new Vector3(0f, 10.7f, -45f);
+            slicingPlaneModel.Position = new Vector3(0f, 10f, -45f);
             slicingPlaneModel.Scale = new Vector3(0.2f, 0.1f, 0.2f);
-            slicingPlaneModel.Rotation = new Vector3(90f, 0f, 0f);
+            slicingPlaneModel.Rotation = new Vector3(90f, 0f, -90f);
             slicingPlaneModel.StormIndexDataSet = stormIndexDataSet;
             slicingPlaneModel.lowerZBound = leftSlidingBarHandleModel.CenterPosition.z;
             slicingPlaneModel.upperZBound = rightSlidingBarHandleModel.CenterPosition.z;
