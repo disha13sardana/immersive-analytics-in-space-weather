@@ -103,19 +103,19 @@ public class SlicingPlaneView : MonoBehaviour
         float semitone = 1.05946f;
         float exponent = 1;
 
-        if (value > 0 && value <= 200)
+        if (value > -150 && value <= -100)
         {
             exponent = 1;
         }
-        else if (value > 200 && value <= 300)
+        else if (value > -100 && value <= -50)
         {
             exponent = 4;
         }
-        else if (value > 300 && value <= 400)
+        else if (value > -50 && value <= 0)
         {
             exponent = 7;
         }
-        else if (value > 400)
+        else if (value > 0)
         {
             exponent = 12;
         }

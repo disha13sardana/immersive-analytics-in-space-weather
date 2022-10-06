@@ -50,6 +50,11 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
 
             // //        view.SetPlaneSound(totalSum);
             //         view.SetupPlaneAudio(slicingPlaneAudioClip, totalSum);
+         float currentLocation = GetCurrentPositionRatio();
+         int currentLocationIndex = (int)(currentLocation * model.StormIndexDataSet.dataPointCount) + 8;
+         float currentSymhValue = model.StormIndexDataSet.data[0, 4, currentLocationIndex];
+            view.SetPlaneSoundPitch(currentSymhValue);
+            view.SetupPlaneAudio(slicingPlaneAudioClip, currentSymhValue);
         }
 
     public float GetCurrentPositionRatio()
@@ -70,6 +75,11 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
 
     void Update()
     {
+
+            float currentLocation = GetCurrentPositionRatio();
+            int currentLocationIndex = (int)(currentLocation * model.StormIndexDataSet.dataPointCount) + 8;
+            float currentSymhValue = model.StormIndexDataSet.data[0, 4, currentLocationIndex];
+
             if (transform.hasChanged)
             {
                 NumFramesEventNotSent += 1;
@@ -81,21 +91,12 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
                 }
 
 
-                //if (!isAudioSourceMuted)
-                //{
-                //    float totalSum = 0f;
-                //    AllReportsAtTimeStamp allReportsAtTimeStamp = model.Mc1Data.GetData(GetCurrentPositionRatio());
-                //    for (int i = 1; i < 20; i++)
-                //    {
-                //        AggregateReport aggregateReport = allReportsAtTimeStamp.GetAggregateReport(i);
-                //        List<float> average = aggregateReport.GetAverage();
-                //        float sum = average.Sum(item => item);
-                //        totalSum = totalSum + sum;
-                //    }
-
-                //    //                view.SetPlaneSound(totalSum);
-                //    view.SetPlaneSoundPitch(totalSum);
-                //}
+                if (!isAudioSourceMuted)
+                {
+                    
+                    view.SetPlaneSoundPitch(currentSymhValue);
+                    view.SetupPlaneAudio(slicingPlaneAudioClip, currentSymhValue);
+                }
 
 
                 transform.hasChanged = false;
@@ -106,13 +107,11 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
             //DateTime dateTime = allReportsAtTimeStamp2.GetDateTime();SetPlotLabel
             //view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture));
 
-            float currentLocation = GetCurrentPositionRatio();
-            int currentLocationIndex = (int) (currentLocation * model.StormIndexDataSet.dataPointCount)  + 8;
             
 
             DateTime dateTime = model.StormIndexDataSet.IndexToDateTime( currentLocationIndex );
 
-            view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture) + "\nSYM-H is " + model.StormIndexDataSet.data[0,4, currentLocationIndex]);
+            view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture) + "\nSYM-H is " + currentSymhValue);
                 //+ " DateTime  " + model.StormIndexDataSet.data[0, 0, currentLocationIndex]
                 //+ " SH  " + model.StormIndexDataSet.data[0, 5, currentLocationIndex]);
             
