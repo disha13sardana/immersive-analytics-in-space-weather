@@ -64,10 +64,10 @@ namespace Scenes
                 datasetNum.Add(n);
             }
             
-            datasetLabelObject.transform.position = new Vector3(-0.7f, 0.8f, 1f);
+            datasetLabelObject.transform.position = new Vector3(-0.14f, 0.8f, 1f);
             datasetLabelObject.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
             TextMesh datasetLabel = datasetLabelObject.GetComponent<TextMesh>();
-            datasetLabel.text = "Click This Button to Start";
+            datasetLabel.text = "Start";
 
             pressableButton.transform.position = new Vector3(0f, 1f, 1f);
             pressableButton.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
@@ -149,11 +149,11 @@ namespace Scenes
                     }
 
 
-                    datasetLabelObject.transform.position = new Vector3(-1.8f, 1.3f, 1.7f);
-                    datasetLabelObject.transform.localEulerAngles = new Vector3(0f, -90f, 0f);
+                    datasetLabelObject.transform.position = new Vector3(1.68f, 1.3f, 2.33f);
+                    datasetLabelObject.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
 
-                    pressableButton.transform.position = new Vector3(-1.8f, 0.5f, 1.5f);
-                    pressableButton.transform.localEulerAngles = new Vector3(0f, -90f, 0f);
+                    pressableButton.transform.position = new Vector3(1.68f, 0.5f, 0.5f);
+                    pressableButton.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
 
                     var stormIndexDataSet = new StormIndexDataSet(stormIndexDataSetName);
 
@@ -234,9 +234,9 @@ namespace Scenes
 
                     //datasetLabelObject.transform.position = new Vector3(-0.7f, 0.8f, 1f);
                     //datasetLabelObject.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
-                    datasetLabelObject.transform.position = new Vector3(-1.8f, 0.85f, 0.9f);
+                    datasetLabelObject.transform.position = new Vector3(1.68f, 0.85f, 0.9f);
                     TextMesh datasetLabel = datasetLabelObject.GetComponent<TextMesh>();
-                    datasetLabel.text = "Click This Button to Start";
+                    datasetLabel.text = "Start Again";
 
                     //pressableButton.transform.position = new Vector3(0f, 1f, 1f);
                     //pressableButton.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
