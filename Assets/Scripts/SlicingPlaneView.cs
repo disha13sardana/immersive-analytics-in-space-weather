@@ -78,14 +78,15 @@ public class SlicingPlaneView : MonoBehaviour
 ////        audioSource.Play(0);
 //    }
 
-    public void SetupPlaneAudio(AudioClip audioClip, float pitchValue)
+    public void SetupPlaneAudio(AudioClip audioClip, float dataValue)
     {
         AudioSource audioSource = GetComponent<AudioSource>();
         audioSource.clip = audioClip;
         audioSource.loop = true;
         audioSource.spatialBlend = 1.0f;
-        audioSource.volume = 1f;
-        audioSource.pitch = ComputePitch(pitchValue);
+        audioSource.volume = ComputeVolume(dataValue);
+        audioSource.pitch = ComputePitch(dataValue);
+        
     }
 
     public void SetPlaneSoundPitch(float value)
@@ -94,31 +95,54 @@ public class SlicingPlaneView : MonoBehaviour
         audioSource.pitch = ComputePitch(value);
     }
 
+
+    private float ComputeVolume(float value)
+        {
+            float minimumDataValue = -450f;
+            float maximumDataValue = 125f;
+            float minimumVolume = 0.1f;
+            float maximumVolume = 1.5f;
+
+            float volumeValue = (-((value - minimumDataValue) / (maximumDataValue - minimumDataValue)))*(maximumVolume-minimumVolume) + maximumVolume;
+
+            
+            return volumeValue;
+        }
     /**
      * Citation: https://answers.unity.com/questions/127562/pitch-in-unity.html
      */
     private float ComputePitch(float value)
     {
         //   float pitch = 1; // default
-        float semitone = 1.05946f;
+        float semitone = 1.05946f;  // this is 2^(1/12) = 1 semitone = approx value taken
         float exponent = 1;
 
-        if (value > -150 && value <= -100)
-        {
-            exponent = 1;
-        }
-        else if (value > -100 && value <= -50)
-        {
-            exponent = 4;
-        }
-        else if (value > -50 && value <= 0)
-        {
-            exponent = 7;
-        }
-        else if (value > 0)
-        {
-            exponent = 12;
-        }
+        //if (value > -150 && value <= -100)
+        //{
+        //    exponent = 1;
+        //}
+        //else if (value > -100 && value <= -50)
+        //{
+        //    exponent = 4;
+        //}
+        //else if (value > -50 && value <= 0)
+        //{
+        //    exponent = 7;
+        //}
+        //else if (value > 0)
+        //{
+        //    exponent = 12;
+        //}
+
+        if (value <= 0)
+            {
+                exponent = -((value / (-450)) * 6 + 3);   
+            }
+
+        if (value > 0)
+            {
+                exponent = -(-(value / 125) * 3 + 3);
+            }
 
         //Debug.Log("Pitch value:" + Convert.ToSingle(Math.Pow(semitone, exponent)));
 

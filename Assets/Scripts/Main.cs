@@ -64,12 +64,12 @@ namespace Scenes
                 datasetNum.Add(n);
             }
             
-            datasetLabelObject.transform.position = new Vector3(-0.14f, 0.8f, 1f);
+            datasetLabelObject.transform.position = new Vector3(-0.11f, 0f, 1f);
             datasetLabelObject.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
             TextMesh datasetLabel = datasetLabelObject.GetComponent<TextMesh>();
             datasetLabel.text = "Start";
 
-            pressableButton.transform.position = new Vector3(0f, 1f, 1f);
+            pressableButton.transform.position = new Vector3(0f, 0.2f, 1f);
             pressableButton.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
 
             datasetLabelObject.SetActive(true);
@@ -149,10 +149,10 @@ namespace Scenes
                     }
 
 
-                    datasetLabelObject.transform.position = new Vector3(1.68f, 1.3f, 2.33f);
+                    datasetLabelObject.transform.position = new Vector3(1.68f, 0.73f, 0.85f);
                     datasetLabelObject.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
 
-                    pressableButton.transform.position = new Vector3(1.68f, 0.5f, 0.5f);
+                    pressableButton.transform.position = new Vector3(1.68f, 0.4f, 0.5f);
                     pressableButton.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
 
                     var stormIndexDataSet = new StormIndexDataSet(stormIndexDataSetName);
@@ -168,7 +168,7 @@ namespace Scenes
                     // Left sliding bar handle with line
                     LeftSlidingBarHandleModel leftSlidingBarHandleModel = new LeftSlidingBarHandleModel();
                     leftSlidingBarHandleModel.SerialId = 0;
-                    leftSlidingBarHandleModel.CenterPosition = new Vector3(0f, 10f, 6f);
+                    leftSlidingBarHandleModel.CenterPosition = new Vector3(0f, 4f, 6f);
                     leftSlidingBarHandleModel.Scale = new Vector3(1f, 0.1f, 1f);
                     leftSlidingBarHandleModel.Rotation = new Vector3(90f, 180f, 0f);
                     leftSlidingBarHandleModel.StormIndexDataSet = stormIndexDataSet;
@@ -181,7 +181,7 @@ namespace Scenes
                     rightSlidingBarHandleModel.SerialId = 0;
 
                     //rightSlidingBarHandleModel.CenterPosition = new Vector3(-4.5f, -6.6f, -58f);
-                    rightSlidingBarHandleModel.CenterPosition = new Vector3(0f, 10f, -52f);
+                    rightSlidingBarHandleModel.CenterPosition = new Vector3(0f, 4f, -52f);
 
                     rightSlidingBarHandleModel.Scale = new Vector3(1f, 0.1f, 1f);
                     rightSlidingBarHandleModel.Rotation = new Vector3(90f, 0f, 0f);
@@ -199,7 +199,7 @@ namespace Scenes
                     SlicingPlaneModel slicingPlaneModel = new SlicingPlaneModel();
                     slicingPlaneModel.SerialId = 0;
                     //rightSlidingBarHandleModel.CenterPosition = new Vector3(-4.5f, -6.6f, -58f);
-                    slicingPlaneModel.Position = new Vector3(0f, 10f, -45f);
+                    slicingPlaneModel.Position = new Vector3(0f, 4f, -45f);
                     slicingPlaneModel.Scale = new Vector3(0.5f, 0.5f, 0.5f);
                     slicingPlaneModel.Rotation = new Vector3(90f, 0f, -90f);
                     slicingPlaneModel.StormIndexDataSet = stormIndexDataSet;
@@ -234,7 +234,7 @@ namespace Scenes
 
                     //datasetLabelObject.transform.position = new Vector3(-0.7f, 0.8f, 1f);
                     //datasetLabelObject.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
-                    datasetLabelObject.transform.position = new Vector3(1.68f, 0.85f, 0.9f);
+                    datasetLabelObject.transform.position = new Vector3(1.68f, 0.73f, 0.85f);
                     TextMesh datasetLabel = datasetLabelObject.GetComponent<TextMesh>();
                     datasetLabel.text = "Start Again";
 
