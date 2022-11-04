@@ -34,30 +34,35 @@ namespace Scenes
         public List<int> datasetNum = new List<int>();
         public int clicked = 0;
 
-      
 
-        
+        [SerializeField]
+        private GameObject solarCycleImage;
 
-    //void SceneSwitch(int dataSet)
-    //{
 
-    //    stormIndexDataSetName = "DataFiles/stormDay_SymIndex" + datasetNames[dataSet];
-    //    currentDatasetIndex += 1;
 
-    //    Debug.Log("Space is hit " + currentDatasetIndex + " " + stormIndexDataSetName);
-    //    //Start();
 
-    //}
+
+        //void SceneSwitch(int dataSet)
+        //{
+
+        //    stormIndexDataSetName = "DataFiles/stormDay_SymIndex" + datasetNames[dataSet];
+        //    currentDatasetIndex += 1;
+
+        //    Debug.Log("Space is hit " + currentDatasetIndex + " " + stormIndexDataSetName);
+        //    //Start();
+
+        //}
 
         public void ChangeDataset()
         {
-            Debug.Log("MRTK button Ran");
+        //    Debug.Log("MRTK button Ran");
             clicked = 1;
         }
 
 
     void Start()
         {
+
 
             for (int n = 0; n < 10; n++)
             {
@@ -118,35 +123,57 @@ namespace Scenes
                     {
                         case 1:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200402";
+                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.323f, 2.297f);
+
                             break;
                         case 2:
-                            stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200004";
+                            stormIndexDataSetName = "DataFiles/stormDay_SymIndex_201110";
+                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.244f, 1.71f);
+
                             break;
                         case 3:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200009";
+                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.198f, 2.57f);
+
                             break;
                         case 4:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200010";
+                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.218f, 2.563f);
+
                             break;
                         case 5:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200103";
+                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.183f, 2.532f);
+
                             break;
                         case 6:
-                            stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200104";
+                            stormIndexDataSetName = "DataFiles/stormDay_SymIndex_201402";
+                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.215f, 1.528f);
+
                             break;
                         case 7:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200204";
+                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.153f, 2.448f);
+
                             break;
                         case 8:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_201303";
+                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.318f, 1.6f);
+
                             break;
                         case 9:
-                            stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200108";
+                            stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200604";
+                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.36f, 2.137f);
+
                             break;
                         default:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200002";
+                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.183f, 2.614f);
+
                             break;
                     }
+
+                    solarCycleImage.SetActive(true);
 
 
                     datasetLabelObject.transform.position = new Vector3(1.68f, 0.73f, 0.85f);
@@ -181,7 +208,7 @@ namespace Scenes
                     rightSlidingBarHandleModel.SerialId = 0;
 
                     //rightSlidingBarHandleModel.CenterPosition = new Vector3(-4.5f, -6.6f, -58f);
-                    rightSlidingBarHandleModel.CenterPosition = new Vector3(0f, 4f, -52f);
+                    rightSlidingBarHandleModel.CenterPosition = new Vector3(0f, 4f, -52.1f);
 
                     rightSlidingBarHandleModel.Scale = new Vector3(1f, 0.1f, 1f);
                     rightSlidingBarHandleModel.Rotation = new Vector3(90f, 0f, 0f);
@@ -237,6 +264,8 @@ namespace Scenes
                     datasetLabelObject.transform.position = new Vector3(1.68f, 0.73f, 0.85f);
                     TextMesh datasetLabel = datasetLabelObject.GetComponent<TextMesh>();
                     datasetLabel.text = "Start Again";
+
+                    solarCycleImage.SetActive(false);
 
                     //pressableButton.transform.position = new Vector3(0f, 1f, 1f);
                     //pressableButton.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
