@@ -23,7 +23,10 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
     public bool isAudioSourceMuted = true;
 
     public AudioClip slicingPlaneAudioClip = null;
-    public GameObject sunriseObject;
+    public GameObject sunriseSoundObject;
+    public GameObject sunsetSoundObject;
+    public GameObject sunriseColor;
+
 
 
     public void Awake()
@@ -75,6 +78,7 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
         }
     }
 
+
     void Update()
     {
 
@@ -106,10 +110,27 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
 
                 if (!isAudioSourceMuted)
                 {
-                    if (currentLocationIndex == 1696)
+                    if (currentLocationIndex == model.sunriseIndex)
                     {
-                        sunriseObject.SetActive(false);
-                        sunriseObject.SetActive(true);
+                        sunriseSoundObject.SetActive(false);
+                        sunriseSoundObject.SetActive(true);
+                        
+                    }
+
+                    if (currentLocationIndex > model.sunriseIndex - 20 && currentLocationIndex < model.sunriseIndex + 20)
+                    {
+                        sunriseColor.SetActive(true);
+                    }
+                    else
+                    {
+                        sunriseColor.SetActive(false);
+                    }
+                    
+
+                    if (currentLocationIndex == model.sunsetIndex)
+                    {
+                        sunsetSoundObject.SetActive(false);
+                        sunsetSoundObject.SetActive(true);
                     }
 
                     view.SetPlaneSoundPitch(currentSymhValue);

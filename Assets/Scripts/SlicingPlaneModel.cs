@@ -18,6 +18,8 @@ public class SlicingPlaneModel : Model
     public Vector3 Rotation = Vector3.zero;
     public float lowerZBound;
     public float upperZBound;
+    public int sunriseIndex;
+    public int sunsetIndex;
     // public Mc1Data Mc1Data;
 }
 }

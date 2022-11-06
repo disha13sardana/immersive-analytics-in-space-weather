@@ -117,6 +117,8 @@ namespace Scenes
                     int i = datasetNum[index];
                     Debug.Log("Index : " + i);
                     datasetNum.RemoveAt(index);
+                    int sunriseIndex = 0;
+                    int sunsetIndex = 0;
 
 
                     switch (i)
@@ -124,51 +126,71 @@ namespace Scenes
                         case 1:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200402";
                             solarCycleImage.transform.position = new Vector3(-1.79f, 0.323f, 2.297f);
+                            sunriseIndex = 725;
+                            sunsetIndex = 1361;
 
                             break;
                         case 2:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_201110";
                             solarCycleImage.transform.position = new Vector3(-1.79f, 0.244f, 1.71f);
+                            sunriseIndex = 686;
+                            sunsetIndex = 1338;
 
                             break;
                         case 3:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200009";
                             solarCycleImage.transform.position = new Vector3(-1.79f, 0.198f, 2.57f);
+                            sunriseIndex = 652;
+                            sunsetIndex = 1393;
 
                             break;
                         case 4:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200010";
                             solarCycleImage.transform.position = new Vector3(-1.79f, 0.218f, 2.563f);
+                            sunriseIndex = 691;
+                            sunsetIndex = 1332;
 
                             break;
                         case 5:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200103";
                             solarCycleImage.transform.position = new Vector3(-1.79f, 0.183f, 2.532f);
+                            sunriseIndex = 673;
+                            sunsetIndex = 1399;
 
                             break;
                         case 6:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_201402";
                             solarCycleImage.transform.position = new Vector3(-1.79f, 0.215f, 1.528f);
+                            sunriseIndex = 716;
+                            sunsetIndex = 1369;
 
                             break;
                         case 7:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200204";
                             solarCycleImage.transform.position = new Vector3(-1.79f, 0.153f, 2.448f);
+                            sunriseIndex = 629;
+                            sunsetIndex = 1427;
 
                             break;
                         case 8:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_201303";
                             solarCycleImage.transform.position = new Vector3(-1.79f, 0.318f, 1.6f);
+                            sunriseIndex = 676;
+                            sunsetIndex = 1397;
 
                             break;
                         case 9:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200604";
                             solarCycleImage.transform.position = new Vector3(-1.79f, 0.36f, 2.137f);
+                            sunriseIndex = 633;
+                            sunsetIndex = 1424;
 
                             break;
                         default:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200002";
                             solarCycleImage.transform.position = new Vector3(-1.79f, 0.183f, 2.614f);
+                            sunriseIndex = 725;
+                            sunsetIndex = 1361;
 
                             break;
                     }
@@ -232,6 +254,8 @@ namespace Scenes
                     slicingPlaneModel.StormIndexDataSet = stormIndexDataSet;
                     slicingPlaneModel.lowerZBound = leftSlidingBarHandleModel.CenterPosition.z - 0.3f;
                     slicingPlaneModel.upperZBound = rightSlidingBarHandleModel.CenterPosition.z;
+                    slicingPlaneModel.sunriseIndex = sunriseIndex;
+                    slicingPlaneModel.sunsetIndex = sunsetIndex;
                     // slicingPlaneModel.Label = "SYM-H Index (nT) at 23:59:00 hrs";
                     slicingPlaneController = Controller.Instantiate<SlicingPlaneController>(SlicingPlaneModel.PrefabName, slicingPlaneModel, transform);
 
