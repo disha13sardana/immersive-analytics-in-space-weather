@@ -78,13 +78,14 @@ public class SlicingPlaneView : MonoBehaviour
 ////        audioSource.Play(0);
 //    }
 
+
     public void SetupPlaneAudio(AudioClip audioClip, float dataValue)
     {
         AudioSource audioSource = GetComponent<AudioSource>();
         audioSource.clip = audioClip;
         audioSource.loop = true;
         audioSource.spatialBlend = 1.0f;
-        audioSource.volume = ComputeVolume(dataValue);
+        // audioSource.volume = ComputeVolume(dataValue);
         audioSource.pitch = ComputePitch(dataValue);
         
     }
@@ -96,18 +97,18 @@ public class SlicingPlaneView : MonoBehaviour
     }
 
 
-    private float ComputeVolume(float value)
-        {
-            float minimumDataValue = -450f;
-            float maximumDataValue = 125f;
-            float minimumVolume = 0.1f;
-            float maximumVolume = 1.5f;
+    //private float ComputeVolume(float value)
+    //    {
+    //        float minimumDataValue = -450f;
+    //        float maximumDataValue = 125f;
+    //        float minimumVolume = 0.1f;
+    //        float maximumVolume = 1.5f;
 
-            float volumeValue = (-((value - minimumDataValue) / (maximumDataValue - minimumDataValue)))*(maximumVolume-minimumVolume) + maximumVolume;
+    //        float volumeValue = (-((value - minimumDataValue) / (maximumDataValue - minimumDataValue)))*(maximumVolume-minimumVolume) + maximumVolume;
 
             
-            return volumeValue;
-        }
+    //        return volumeValue;
+    //    }
     /**
      * Citation: https://answers.unity.com/questions/127562/pitch-in-unity.html
      */
@@ -117,36 +118,48 @@ public class SlicingPlaneView : MonoBehaviour
         float semitone = 1.05946f;  // this is 2^(1/12) = 1 semitone = approx value taken
         float exponent = 1;
 
-        //if (value > -150 && value <= -100)
-        //{
-        //    exponent = 1;
-        //}
-        //else if (value > -100 && value <= -50)
-        //{
-        //    exponent = 4;
-        //}
-        //else if (value > -50 && value <= 0)
-        //{
-        //    exponent = 7;
-        //}
-        //else if (value > 0)
-        //{
-        //    exponent = 12;
-        //}
+            //if (value > -150 && value <= -100)
+            //{
+            //    exponent = 1;
+            //}
+            //else if (value > -100 && value <= -50)
+            //{
+            //    exponent = 4;
+            //}
+            //else if (value > -50 && value <= 0)
+            //{
+            //    exponent = 7;
+            //}
+            //else if (value > 0)
+            //{
+            //    exponent = 12;
+            //}
 
-        if (value <= 0)
-            {
-                exponent = -((value / (-450)) * 6 + 3);   
-            }
+            //  -280      ->        125
+            //  -24       ->        0
 
-        if (value > 0)
-            {
-                exponent = -(-(value / 125) * 3 + 3);
-            }
+            // (-280 - 125)(-280 - 125)*(-24 - 0)
 
-        //Debug.Log("Pitch value:" + Convert.ToSingle(Math.Pow(semitone, exponent)));
+            float minimumDataValue = -280f;
+            float maximumDataValue = 125f;
+            float minimumExponent = -24f;   // A2 = 110hz
+            float maximumExponent = 0f;      // A4 == 440hz
 
-        return Convert.ToSingle(Math.Pow(semitone, exponent));
+            exponent = ((value - maximumDataValue) / (minimumDataValue - maximumDataValue)) * (minimumExponent - maximumExponent);
+
+            //if (value <= 0)
+            //    {
+            //        exponent = -((value / (-280)) * 6 + 3);   
+            //    }
+
+            //if (value > 0)
+            //    {
+            //        exponent = -(-(value / 125) * 3 + 3);
+            //    }
+
+            //Debug.Log("Pitch value:" + Convert.ToSingle(Math.Pow(semitone, exponent)));
+
+            return Convert.ToSingle(Math.Pow(semitone, exponent));
     }
 
     public void SetAudioActive(bool active)

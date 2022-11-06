@@ -123,52 +123,52 @@ namespace Scenes
                     {
                         case 1:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200402";
-                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.323f, 2.297f);
+                            solarCycleImage.transform.position = new Vector3(-1.79f, 0.323f, 2.297f);
 
                             break;
                         case 2:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_201110";
-                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.244f, 1.71f);
+                            solarCycleImage.transform.position = new Vector3(-1.79f, 0.244f, 1.71f);
 
                             break;
                         case 3:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200009";
-                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.198f, 2.57f);
+                            solarCycleImage.transform.position = new Vector3(-1.79f, 0.198f, 2.57f);
 
                             break;
                         case 4:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200010";
-                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.218f, 2.563f);
+                            solarCycleImage.transform.position = new Vector3(-1.79f, 0.218f, 2.563f);
 
                             break;
                         case 5:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200103";
-                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.183f, 2.532f);
+                            solarCycleImage.transform.position = new Vector3(-1.79f, 0.183f, 2.532f);
 
                             break;
                         case 6:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_201402";
-                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.215f, 1.528f);
+                            solarCycleImage.transform.position = new Vector3(-1.79f, 0.215f, 1.528f);
 
                             break;
                         case 7:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200204";
-                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.153f, 2.448f);
+                            solarCycleImage.transform.position = new Vector3(-1.79f, 0.153f, 2.448f);
 
                             break;
                         case 8:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_201303";
-                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.318f, 1.6f);
+                            solarCycleImage.transform.position = new Vector3(-1.79f, 0.318f, 1.6f);
 
                             break;
                         case 9:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200604";
-                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.36f, 2.137f);
+                            solarCycleImage.transform.position = new Vector3(-1.79f, 0.36f, 2.137f);
 
                             break;
                         default:
                             stormIndexDataSetName = "DataFiles/stormDay_SymIndex_200002";
-                            solarCycleImage.transform.position = new Vector3(-1.78f, 0.183f, 2.614f);
+                            solarCycleImage.transform.position = new Vector3(-1.79f, 0.183f, 2.614f);
 
                             break;
                     }
@@ -196,7 +196,7 @@ namespace Scenes
                     LeftSlidingBarHandleModel leftSlidingBarHandleModel = new LeftSlidingBarHandleModel();
                     leftSlidingBarHandleModel.SerialId = 0;
                     leftSlidingBarHandleModel.CenterPosition = new Vector3(0f, 4f, 6f);
-                    leftSlidingBarHandleModel.Scale = new Vector3(1f, 0.1f, 1f);
+                    leftSlidingBarHandleModel.Scale = new Vector3(1.2f, 0.1f, 1.2f);
                     leftSlidingBarHandleModel.Rotation = new Vector3(90f, 180f, 0f);
                     leftSlidingBarHandleModel.StormIndexDataSet = stormIndexDataSet;
                     leftSlidingBarHandleModel.Label = "" + stormIndexDataSet.earliestTimeStamp;
@@ -208,9 +208,9 @@ namespace Scenes
                     rightSlidingBarHandleModel.SerialId = 0;
 
                     //rightSlidingBarHandleModel.CenterPosition = new Vector3(-4.5f, -6.6f, -58f);
-                    rightSlidingBarHandleModel.CenterPosition = new Vector3(0f, 4f, -52.1f);
+                    rightSlidingBarHandleModel.CenterPosition = new Vector3(0f, 4f, -52f);
 
-                    rightSlidingBarHandleModel.Scale = new Vector3(1f, 0.1f, 1f);
+                    rightSlidingBarHandleModel.Scale = new Vector3(1.2f, 0.1f, 1.2f);
                     rightSlidingBarHandleModel.Rotation = new Vector3(90f, 0f, 0f);
                     rightSlidingBarHandleModel.StormIndexDataSet = stormIndexDataSet;
                     rightSlidingBarHandleModel.Label = "" + stormIndexDataSet.lastTimeStamp;
@@ -230,7 +230,7 @@ namespace Scenes
                     slicingPlaneModel.Scale = new Vector3(0.5f, 0.5f, 0.5f);
                     slicingPlaneModel.Rotation = new Vector3(90f, 0f, -90f);
                     slicingPlaneModel.StormIndexDataSet = stormIndexDataSet;
-                    slicingPlaneModel.lowerZBound = leftSlidingBarHandleModel.CenterPosition.z;
+                    slicingPlaneModel.lowerZBound = leftSlidingBarHandleModel.CenterPosition.z - 0.3f;
                     slicingPlaneModel.upperZBound = rightSlidingBarHandleModel.CenterPosition.z;
                     // slicingPlaneModel.Label = "SYM-H Index (nT) at 23:59:00 hrs";
                     slicingPlaneController = Controller.Instantiate<SlicingPlaneController>(SlicingPlaneModel.PrefabName, slicingPlaneModel, transform);

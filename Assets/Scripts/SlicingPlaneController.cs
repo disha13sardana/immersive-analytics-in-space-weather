@@ -23,6 +23,8 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
     public bool isAudioSourceMuted = true;
 
     public AudioClip slicingPlaneAudioClip = null;
+    public GameObject sunriseObject;
+
 
     public void Awake()
     {
@@ -51,7 +53,7 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
             // //        view.SetPlaneSound(totalSum);
             //         view.SetupPlaneAudio(slicingPlaneAudioClip, totalSum);
          float currentLocation = GetCurrentPositionRatio();
-         int currentLocationIndex = (int)(currentLocation * model.StormIndexDataSet.dataPointCount) + 8;
+         int currentLocationIndex = (int)(currentLocation * model.StormIndexDataSet.dataPointCount);
          float currentSymhValue = model.StormIndexDataSet.data[0, 4, currentLocationIndex];
             view.SetPlaneSoundPitch(currentSymhValue);
             view.SetupPlaneAudio(slicingPlaneAudioClip, currentSymhValue);
@@ -77,8 +79,19 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
     {
 
             float currentLocation = GetCurrentPositionRatio();
-            int currentLocationIndex = (int)(currentLocation * model.StormIndexDataSet.dataPointCount) + 8;
+            int currentLocationIndex = (int)(currentLocation * model.StormIndexDataSet.dataPointCount);
             float currentSymhValue = model.StormIndexDataSet.data[0, 4, currentLocationIndex];
+
+           
+
+            DateTime dateTime = model.StormIndexDataSet.IndexToDateTime(currentLocationIndex);
+
+
+            Debug.Log("Current DateTime" + dateTime + "");
+
+            view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture) + "\nSYM-H is " + currentSymhValue + "\nCurrent Location Index " + currentLocationIndex);
+
+
 
             if (transform.hasChanged)
             {
@@ -93,7 +106,12 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
 
                 if (!isAudioSourceMuted)
                 {
-                    
+                    if (currentLocationIndex == 1696)
+                    {
+                        sunriseObject.SetActive(false);
+                        sunriseObject.SetActive(true);
+                    }
+
                     view.SetPlaneSoundPitch(currentSymhValue);
                     view.SetupPlaneAudio(slicingPlaneAudioClip, currentSymhValue);
                 }
@@ -109,9 +127,7 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
 
             
 
-            DateTime dateTime = model.StormIndexDataSet.IndexToDateTime( currentLocationIndex );
-
-            view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture) + "\nSYM-H is " + currentSymhValue);
+         
                 //+ " DateTime  " + model.StormIndexDataSet.data[0, 0, currentLocationIndex]
                 //+ " SH  " + model.StormIndexDataSet.data[0, 5, currentLocationIndex]);
             
