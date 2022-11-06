@@ -26,6 +26,7 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
     public GameObject sunriseSoundObject;
     public GameObject sunsetSoundObject;
     public GameObject sunriseColor;
+    public GameObject sunsetColor;
 
 
 
@@ -131,6 +132,14 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
                     {
                         sunsetSoundObject.SetActive(false);
                         sunsetSoundObject.SetActive(true);
+                    }
+                    if (currentLocationIndex > model.sunsetIndex - 20 && currentLocationIndex < model.sunsetIndex + 20)
+                    {
+                        sunsetColor.SetActive(true);
+                    }
+                    else
+                    {
+                        sunsetColor.SetActive(false);
                     }
 
                     view.SetPlaneSoundPitch(currentSymhValue);
