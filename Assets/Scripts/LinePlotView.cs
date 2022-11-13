@@ -12,24 +12,26 @@ namespace Scenes
 
         int resolution = 50;
         
-        public void PlotData(Dictionary<string, float> timeStampToValueMap, float lineWidth)
+        public void PlotData(Dictionary<string, List<float>> timeStampToValueMap, float lineWidth, int dataIndex)
         {
             LineRenderer lr = GetComponent<LineRenderer>();
             lr.widthMultiplier = lineWidth;
             lr.positionCount = timeStampToValueMap.Count+2;
             lr.useWorldSpace = false;
-            lr.colorGradient = ComputeGradient(opacity);
+            lr.colorGradient = ComputeGradient(opacity, dataIndex);
+
 
             //Source: https://catlikecoding.com/unity/tutorials/basics/building-a-graph/
 
             lr.SetPosition(0, new Vector3(0f, 0f, 0.1f ));
             
             int i = 1;
-            foreach (KeyValuePair<string, float> timeStampToValuePair in timeStampToValueMap)
+            foreach (KeyValuePair<string, List<float>> timeStampToValuePair in timeStampToValueMap)
             {
                 // z = float i/5 because we need to scale the data points.
                 // 5 because resolution = 10 , so half the scale: 10/2 = 5
-                lr.SetPosition(i, new Vector3(0f, timeStampToValuePair.Value , 0.1f + (float) i / (resolution/2)));
+                // timeStampToValuePair value = [AysmH, SymH]
+                lr.SetPosition(i, new Vector3(0f, timeStampToValuePair.Value[dataIndex] , 0.1f + (float) i / (resolution/2)));
                 i += 1;
                 
                 // Debug.Log("i:after   " + i + "   timeStampToValuePair   : " + timeStampToValuePair.Value + "  " + timeStampToValuePair.Key);
@@ -65,13 +67,26 @@ namespace Scenes
             );
         }
 
-        private Gradient ComputeGradient(float gradientAlpha)
+        private Gradient ComputeGradient(float gradientAlpha ,int dataIndex)
         {
             Gradient gradient = new Gradient();
-            gradient.SetKeys(
-                new[] {new GradientColorKey(Color.red, 0.0f), new GradientColorKey(Color.red, 1.0f)},
-                new[] {new GradientAlphaKey(gradientAlpha, 0.0f), new GradientAlphaKey(gradientAlpha, 1.0f)}
+
+            if(dataIndex == 1)
+            {
+                gradient.SetKeys(
+                new[] { new GradientColorKey(Color.red, 0.0f), new GradientColorKey(Color.red, 1.0f) },
+                new[] { new GradientAlphaKey(gradientAlpha, 0.0f), new GradientAlphaKey(gradientAlpha, 1.0f) }
             );
+
+            }
+            else
+            {
+                gradient.SetKeys(
+                new[] { new GradientColorKey(Color.green, 0.0f), new GradientColorKey(Color.green, 1.0f) },
+                new[] { new GradientAlphaKey(gradientAlpha, 0.0f), new GradientAlphaKey(gradientAlpha, 1.0f) }
+            );
+            }
+            
             return gradient;
         }
     }

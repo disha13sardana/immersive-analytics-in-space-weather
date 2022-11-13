@@ -14,7 +14,7 @@ namespace Scenes
 
         protected override void OnInitialize()
         {
-            view.PlotData(model.Data, model.LineWidth);
+            view.PlotData(model.Data, model.LineWidth, model.DataVariable);
             view.SetPosition(model.OriginPosition);
             view.SetScale(model.Scale);
             view.SetRotation(model.Rotation);

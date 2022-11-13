@@ -61,6 +61,8 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
          float currentSymhValue = model.StormIndexDataSet.data[0, 4, currentLocationIndex];
             view.SetPlaneSoundPitch(currentSymhValue);
             view.SetupPlaneAudio(slicingPlaneAudioClip, currentSymhValue);
+
+         
         }
 
     public float GetCurrentPositionRatio()
@@ -86,6 +88,7 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
             float currentLocation = GetCurrentPositionRatio();
             int currentLocationIndex = (int)(currentLocation * model.StormIndexDataSet.dataPointCount);
             float currentSymhValue = model.StormIndexDataSet.data[0, 4, currentLocationIndex];
+            float currentAsymhValue = model.StormIndexDataSet.data[0, 2, currentLocationIndex];
 
            
 
@@ -118,8 +121,9 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
                         
                     }
 
-                    if (currentLocationIndex > model.sunriseIndex - 20 && currentLocationIndex < model.sunriseIndex + 20)
+                    if (currentLocationIndex > model.sunriseIndex && currentLocationIndex < model.sunsetIndex)
                     {
+                        
                         sunriseColor.SetActive(true);
                     }
                     else
@@ -133,14 +137,12 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
                         sunsetSoundObject.SetActive(false);
                         sunsetSoundObject.SetActive(true);
                     }
-                    if (currentLocationIndex > model.sunsetIndex - 20 && currentLocationIndex < model.sunsetIndex + 20)
-                    {
-                        sunsetColor.SetActive(true);
-                    }
-                    else
-                    {
-                        sunsetColor.SetActive(false);
-                    }
+                    //if (currentLocationIndex > model.sunsetIndex - 20 && currentLocationIndex < model.sunsetIndex + 20)
+                    //{
+                    //    sunriseColor.SetActive(false);
+                    //    sunsetColor.SetActive(true);
+                    //}
+
 
                     view.SetPlaneSoundPitch(currentSymhValue);
                     view.SetupPlaneAudio(slicingPlaneAudioClip, currentSymhValue);

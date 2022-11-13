@@ -47,16 +47,17 @@ namespace Scenes
         {
             DateTime endTimeStamp = modelStormIndexDataSet.lastTimeStamp;
             DateTime currentTimeStamp = modelStormIndexDataSet.earliestTimeStamp;
-            TimeSpan fiveMinutes = modelStormIndexDataSet.timeResolution;
+            TimeSpan oneMinutes = modelStormIndexDataSet.timeResolution;
             
             int resolution = 50;
 
             // float value;
             
             // dataa is a dictionary with location as key, and another dictionary as value.
-            Dictionary<int, Dictionary<string, float>> dataa = new Dictionary<int, Dictionary<string, float>>
+            Dictionary<int, Dictionary<string, List<float>>> dataa = new Dictionary<int, Dictionary<string, List<float>>>
             {
-                {1, new Dictionary<string, float>()}
+                {1, new Dictionary<string, List<float>>()},
+                {2, new Dictionary<string, List<float>>()}
             };
 
             
@@ -66,7 +67,15 @@ namespace Scenes
 
                 int timeStampIndex = modelStormIndexDataSet.DateTimeToIndex(currentTimeStamp);
 
-                float value = modelStormIndexDataSet.data[0, 4, timeStampIndex];
+                float valueSymH = modelStormIndexDataSet.data[0, 4, timeStampIndex];
+                float valueAsymH = modelStormIndexDataSet.data[0, 2, timeStampIndex];
+
+
+                List<float> value = new List<float>
+                {
+                    valueAsymH, valueSymH
+                };
+
 
                 // Debug.Log("timestamp = " + currentTimeStamp + "  Index = " + timeStampIndex + " SYM-value =" + value);
 
@@ -82,19 +91,19 @@ namespace Scenes
                 // }
                 //
                 
-                foreach (KeyValuePair<int, Dictionary<string, float>> locationToDictPair in dataa)
+                foreach (KeyValuePair<int, Dictionary<string, List<float>>> locationToDictPair in dataa)
                 {
                     // int location = locationToDictPair.Key;
                     // AggregateReport aggregateReportForLocationAndTimeStamp =
                     //     allReportsAtTimeStamp.GetAggregateReport(location);
                     // int count = aggregateReportForLocationAndTimeStamp.GetAggregateCount();
-                    locationToDictPair.Value[currentTimeStamp.ToString(CultureInfo.CurrentCulture)] = value;
+                    locationToDictPair.Value[currentTimeStamp.ToString(CultureInfo.CurrentCulture)] =  value;
                     
                     // Debug.Log("Dictionary value:  "+ locationToDictPair.Value[currentTimeStamp.ToString(CultureInfo.CurrentCulture)]);
                 }
                 
                 
-                currentTimeStamp += fiveMinutes;
+                currentTimeStamp += oneMinutes;
             }
             
             
@@ -107,6 +116,7 @@ namespace Scenes
                 linePlotModel.OriginPosition.y = linePlotModel.OriginPosition.y + 3.0f;
                 linePlotModel.Scale = new Vector3(0.2f, 0.15f, 5f);
                 linePlotModel.Data = dataa[keyValuePair.Key];
+                linePlotModel.DataVariable = keyValuePair.Key - 1;
                 linePlotModel.LineWidth = 0.01f;
                 linePlotModel.Rotation = new Vector3(-90f, 0f, 0f);
                 linePlotModel.DataPointScale = Vector3.one / resolution;

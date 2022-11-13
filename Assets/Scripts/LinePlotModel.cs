@@ -6,7 +6,8 @@ using UnityEngine;
 public class LinePlotModel : Model
 {
     public string PrefabName = "LinePlotPrefab";
-    public Dictionary<string, float> Data;
+    public Dictionary<string, List<float>> Data;
+    public int DataVariable;
     public Vector3 DataPointScale;
     public Vector3 OriginPosition;
     public Vector3 Scale;
