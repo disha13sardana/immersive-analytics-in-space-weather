@@ -31,12 +31,19 @@ namespace Scenes
         [SerializeField]
         private GameObject pressableButton;
 
+        [SerializeField]
+        private GameObject pressableButton2;
+
+
         public List<int> datasetNum = new List<int>();
         public int clicked = 0;
 
 
         [SerializeField]
         private GameObject solarCycleImage;
+
+
+        public int soundMuted = 0;
 
 
 
@@ -57,6 +64,11 @@ namespace Scenes
         {
         //    Debug.Log("MRTK button Ran");
             clicked = 1;
+        }
+
+        public void MuteSound()
+        {
+            soundMuted = 1;
         }
 
 
@@ -80,6 +92,10 @@ namespace Scenes
             datasetLabelObject.SetActive(true);
             pressableButton.SetActive(true);
 
+            pressableButton2.transform.position = new Vector3(0.2f, 0.2f, 1f);
+            pressableButton2.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
+
+            pressableButton2.SetActive(true);
             //SpatialMapping.Instance.DrawVisualMeshes = false;
 
             // pointList = CSVReader.Read("mc1_clean");
@@ -99,6 +115,8 @@ namespace Scenes
             if (clicked == 1)
             {
                 clicked = 0;
+
+                pressableButton2.SetActive(false);
                 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 Debug.Log("R is hit");
                 foreach (Transform child in transform)
@@ -204,6 +222,8 @@ namespace Scenes
                     pressableButton.transform.position = new Vector3(1.68f, 0.4f, 0.5f);
                     pressableButton.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
 
+
+
                     var stormIndexDataSet = new StormIndexDataSet(stormIndexDataSetName);
 
                     TextMesh datasetLabel = datasetLabelObject.GetComponent<TextMesh>();
@@ -256,6 +276,7 @@ namespace Scenes
                     slicingPlaneModel.upperZBound = rightSlidingBarHandleModel.CenterPosition.z;
                     slicingPlaneModel.sunriseIndex = sunriseIndex;
                     slicingPlaneModel.sunsetIndex = sunsetIndex;
+                    slicingPlaneModel.SoundMuted = soundMuted;
                     // slicingPlaneModel.Label = "SYM-H Index (nT) at 23:59:00 hrs";
                     slicingPlaneController = Controller.Instantiate<SlicingPlaneController>(SlicingPlaneModel.PrefabName, slicingPlaneModel, transform);
 

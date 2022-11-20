@@ -20,6 +20,7 @@ public class SlicingPlaneModel : Model
     public float upperZBound;
     public int sunriseIndex;
     public int sunsetIndex;
+    public int SoundMuted;
     // public Mc1Data Mc1Data;
 }
 }

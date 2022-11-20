@@ -28,6 +28,9 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
     public GameObject sunriseColor;
     public GameObject sunsetColor;
 
+    private int previousLocationIndex;
+
+
 
 
     public void Awake()
@@ -59,10 +62,19 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
          float currentLocation = GetCurrentPositionRatio();
          int currentLocationIndex = (int)(currentLocation * model.StormIndexDataSet.dataPointCount);
          float currentSymhValue = model.StormIndexDataSet.data[0, 4, currentLocationIndex];
-            view.SetPlaneSoundPitch(currentSymhValue);
-            view.SetupPlaneAudio(slicingPlaneAudioClip, currentSymhValue);
+            float currentAsymhValue = model.StormIndexDataSet.data[0, 2, currentLocationIndex];
 
-         
+            previousLocationIndex = currentLocationIndex;
+
+
+            if (model.SoundMuted == 0)
+            {
+                view.SetPlaneSoundPitch(currentAsymhValue);
+                view.SetupPlaneAudio(slicingPlaneAudioClip, currentAsymhValue);
+            }
+
+
+
         }
 
     public float GetCurrentPositionRatio()
@@ -114,11 +126,26 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
 
                 if (!isAudioSourceMuted)
                 {
-                    if (currentLocationIndex == model.sunriseIndex)
+                    if (model.SoundMuted == 0)
                     {
-                        sunriseSoundObject.SetActive(false);
-                        sunriseSoundObject.SetActive(true);
+
+
+                    
+                        if (Math.Max(currentLocationIndex, previousLocationIndex) >= model.sunriseIndex && model.sunriseIndex >= Math.Min(currentLocationIndex, previousLocationIndex))
+                        {
+                            sunriseSoundObject.SetActive(false);
+                            sunriseSoundObject.SetActive(true);
                         
+                        }
+
+                        if (Math.Max(currentLocationIndex, previousLocationIndex) >= model.sunsetIndex && model.sunsetIndex >= Math.Min(currentLocationIndex, previousLocationIndex))
+                        {
+                            sunsetSoundObject.SetActive(false);
+                            sunsetSoundObject.SetActive(true);
+                        }
+
+                        view.SetPlaneSoundPitch(currentAsymhValue);
+                        view.SetupPlaneAudio(slicingPlaneAudioClip, currentAsymhValue);
                     }
 
                     if (currentLocationIndex > model.sunriseIndex && currentLocationIndex < model.sunsetIndex)
@@ -132,11 +159,7 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
                     }
                     
 
-                    if (currentLocationIndex == model.sunsetIndex)
-                    {
-                        sunsetSoundObject.SetActive(false);
-                        sunsetSoundObject.SetActive(true);
-                    }
+                   
                     //if (currentLocationIndex > model.sunsetIndex - 20 && currentLocationIndex < model.sunsetIndex + 20)
                     //{
                     //    sunriseColor.SetActive(false);
@@ -144,12 +167,12 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
                     //}
 
 
-                    view.SetPlaneSoundPitch(currentSymhValue);
-                    view.SetupPlaneAudio(slicingPlaneAudioClip, currentSymhValue);
+                    
                 }
 
 
                 transform.hasChanged = false;
+                previousLocationIndex = currentLocationIndex;
             }
 
 
@@ -196,8 +219,13 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
 
     public void SetAudioActive(bool active)
     {
+
         isAudioSourceMuted = !active;
-        view.SetAudioActive(active);
+        if(model.SoundMuted == 0)
+            {
+                view.SetAudioActive(active);
+            }
+        
         //Debug.Log("Active!!!" + active);
     }
 

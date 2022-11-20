@@ -426,7 +426,7 @@ MonoBehaviour:
       Microsoft.MixedReality.Toolkit.SDK
   smoothingFar: 1
   smoothingNear: 1
-  moveLerpTime: 0.001
+  moveLerpTime: 0.5
   rotateLerpTime: 0.001
   scaleLerpTime: 0.001
   enableConstraints: 1
