@@ -13,4 +13,5 @@ public class LinePlotModel : Model
     public Vector3 Scale;
     public float LineWidth;
     public Vector3 Rotation = Vector3.zero;
+    public int DTecValMax;
 }

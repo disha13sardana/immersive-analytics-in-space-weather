@@ -17,7 +17,7 @@ namespace Scenes
             {
                 "DateTime",
                 "DOY",
-                "ASY_D",
+                "D_TEC",
                 "ASY_H",
                 "SYM_D",
                 "SYM_H",

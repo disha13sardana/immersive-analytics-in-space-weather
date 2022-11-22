@@ -16,8 +16,8 @@ namespace Scenes
 
         public readonly Dictionary<int, Vector3> RegionIdToLocationMap = new Dictionary<int, Vector3>
         {
-            {1, new Vector3(0.5f, 0f, 0.5f)},
-            {2, new Vector3(0.5f, 0f, 0.5f)}
+            //{1, new Vector3(0.5f, 0f, 0.5f)},    // DTec
+            {2, new Vector3(0.5f, 0f, 0.5f)}        // SymH
         };
     }
 }

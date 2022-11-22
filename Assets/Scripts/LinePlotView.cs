@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Scenes
@@ -20,6 +21,18 @@ namespace Scenes
             lr.useWorldSpace = false;
             lr.colorGradient = ComputeGradient(opacity, dataIndex);
 
+            float multiplyer;
+
+            if(dataIndex == 1)
+            {
+                multiplyer = 0.9f;
+            }
+            else
+            {
+
+                multiplyer = 10f;
+            }
+
 
             //Source: https://catlikecoding.com/unity/tutorials/basics/building-a-graph/
 
@@ -30,8 +43,8 @@ namespace Scenes
             {
                 // z = float i/5 because we need to scale the data points.
                 // 5 because resolution = 10 , so half the scale: 10/2 = 5
-                // timeStampToValuePair value = [AysmH, SymH]
-                lr.SetPosition(i, new Vector3(0f, timeStampToValuePair.Value[dataIndex] , 0.1f + (float) i / (resolution/2)));
+                // timeStampToValuePair value = [DTec, SymH]
+                lr.SetPosition(i, new Vector3(0f, timeStampToValuePair.Value[dataIndex]* multiplyer, 0.1f + (float) i / (resolution/2)));
                 i += 1;
                 
                 // Debug.Log("i:after   " + i + "   timeStampToValuePair   : " + timeStampToValuePair.Value + "  " + timeStampToValuePair.Key);
@@ -41,6 +54,7 @@ namespace Scenes
             
 
         }
+
 
         public void SetPosition(Vector3 position)
         {

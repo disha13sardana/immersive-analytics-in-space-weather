@@ -140,8 +140,8 @@ public class SlicingPlaneView : MonoBehaviour
 
             // (-280 - 125)(-280 - 125)*(-24 - 0)
 
-            float minimumDataValue = -280f;
-            float maximumDataValue = 125f;
+            float minimumDataValue = -37f;
+            float maximumDataValue = 14f;
             float minimumExponent = -24f;   // A2 = 110hz
             float maximumExponent = 0f;      // A4 == 440hz
 

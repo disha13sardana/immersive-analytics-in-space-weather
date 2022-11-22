@@ -68,12 +68,12 @@ namespace Scenes
                 int timeStampIndex = modelStormIndexDataSet.DateTimeToIndex(currentTimeStamp);
 
                 float valueSymH = modelStormIndexDataSet.data[0, 4, timeStampIndex];
-                float valueAsymH = modelStormIndexDataSet.data[0, 2, timeStampIndex];
+                float valueDTec = modelStormIndexDataSet.data[0, 1, timeStampIndex];
 
 
                 List<float> value = new List<float>
                 {
-                    valueAsymH, valueSymH
+                    valueDTec, valueSymH
                 };
 
 

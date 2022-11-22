@@ -66,12 +66,12 @@ public class StormIndexDataSet
             // TODO Check last column for region.
             int region = Int32.Parse(report[StormIndexDataUtil.StormIndexColumnNames[totalNUmberOfColumns + 1]].ToString()) - 1; // num columns - 2 + 1
 
-            Debug.Log("Our Region" + region);
+            // Debug.Log("Our Region" + region);
 
             for (int j = 0; j < totalNUmberOfColumns; j++) {
                 
                 data[region, j, timeStampIndex] = float.Parse(report[StormIndexDataUtil.StormIndexColumnNames[j+1]].ToString());
-                Debug.Log(region + " " + j + " " + timeStampIndex + " = " + data[region, j, timeStampIndex]);
+                // Debug.Log(region + " " + j + " " + timeStampIndex + " = " + data[region, j, timeStampIndex]);
             }
 
 

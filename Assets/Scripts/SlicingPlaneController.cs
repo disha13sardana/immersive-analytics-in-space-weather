@@ -100,14 +100,14 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
             float currentLocation = GetCurrentPositionRatio();
             int currentLocationIndex = (int)(currentLocation * model.StormIndexDataSet.dataPointCount);
             float currentSymhValue = model.StormIndexDataSet.data[0, 4, currentLocationIndex];
-            float currentAsymhValue = model.StormIndexDataSet.data[0, 2, currentLocationIndex];
+            float currentDTecValue = model.StormIndexDataSet.data[0, 1, currentLocationIndex];
 
            
 
             DateTime dateTime = model.StormIndexDataSet.IndexToDateTime(currentLocationIndex);
 
 
-            Debug.Log("Current DateTime" + dateTime + "");
+            // Debug.Log("Current DateTime" + dateTime + "");
 
             view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture) + "\nSYM-H is " + currentSymhValue + "\nCurrent Location Index " + currentLocationIndex);
 
@@ -144,8 +144,8 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
                             sunsetSoundObject.SetActive(true);
                         }
 
-                        view.SetPlaneSoundPitch(currentAsymhValue);
-                        view.SetupPlaneAudio(slicingPlaneAudioClip, currentAsymhValue);
+                        view.SetPlaneSoundPitch(currentDTecValue);
+                        view.SetupPlaneAudio(slicingPlaneAudioClip, currentDTecValue);
                     }
 
                     if (currentLocationIndex > model.sunriseIndex && currentLocationIndex < model.sunsetIndex)
