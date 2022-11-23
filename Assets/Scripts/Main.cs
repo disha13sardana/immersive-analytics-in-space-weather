@@ -212,7 +212,7 @@ namespace Scenes
             TextMesh datasetLabel = datasetLabelObject.GetComponent<TextMesh>();
             datasetLabel.text = "Start";
 
-            pressableButton.transform.position = new Vector3(0f, 0.2f, 1f);
+            pressableButton.transform.position = new Vector3(-0.2f, 0.2f, 1f);
             pressableButton.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
 
             datasetLabelObject.SetActive(true);
