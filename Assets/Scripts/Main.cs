@@ -237,8 +237,9 @@ namespace Scenes
             if (clicked == 1)
             {
                 clicked = 0;
-
-                solarCycleImage.SetActive(true);
+    
+                //// Activate solar cycle plot
+                // solarCycleImage.SetActive(true);
 
                 pressableButton2.SetActive(false);
 
@@ -501,7 +502,7 @@ namespace Scenes
 
                     //datasetLabelObject.transform.position = new Vector3(-0.7f, 0.8f, 1f);
                     //datasetLabelObject.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
-                    datasetLabelObject.transform.position = new Vector3(1.68f, 0.73f, 0.85f);
+                    datasetLabelObject.transform.position = new Vector3(1.68f, 0.73f, 0.77f);
                     TextMesh datasetLabel = datasetLabelObject.GetComponent<TextMesh>();
                     datasetLabel.text = "Start Again";
 
