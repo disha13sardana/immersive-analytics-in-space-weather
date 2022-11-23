@@ -104,9 +104,12 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
             DateTime dateTime = model.StormIndexDataSet.IndexToDateTime(currentLocationIndex);
             
             // Debug.Log("Current DateTime" + dateTime + "");
-            view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture));
+            //// Display datetime for SYM-H plots
+            // view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture));
 
-            // view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture) + "\nSYM-H is " + currentSymhValue + "\nCurrent Location Index " + currentLocationIndex);
+            //// Display DTEC values for dtec plots
+            view.SetPlotLabel("Delta TEC is " + currentDTecValue);
+            // view.SetPlotLabel("Delta TEC is " + currentDTecValue + "\nCurrent Location Index " + currentLocationIndex);
             
             if (transform.hasChanged)
             {
