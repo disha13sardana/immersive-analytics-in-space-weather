@@ -59,23 +59,22 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
 
             // //        view.SetPlaneSound(totalSum);
             //         view.SetupPlaneAudio(slicingPlaneAudioClip, totalSum);
+            
          float currentLocation = GetCurrentPositionRatio();
          int currentLocationIndex = (int)(currentLocation * model.StormIndexDataSet.dataPointCount);
          float currentSymhValue = model.StormIndexDataSet.data[0, 4, currentLocationIndex];
-            float currentAsymhValue = model.StormIndexDataSet.data[0, 2, currentLocationIndex];
+         float currentDTecValue = model.StormIndexDataSet.data[0, 1, currentLocationIndex];
+         // float currentAsymhValue = model.StormIndexDataSet.data[0, 2, currentLocationIndex];
 
             previousLocationIndex = currentLocationIndex;
 
-
             if (model.SoundMuted == 0)
             {
-                view.SetPlaneSoundPitch(currentAsymhValue);
-                view.SetupPlaneAudio(slicingPlaneAudioClip, currentAsymhValue);
+                view.SetPlaneSoundPitch(currentDTecValue);
+                view.SetupPlaneAudio(slicingPlaneAudioClip, currentDTecValue);
             }
 
-
-
-        }
+    }
 
     public float GetCurrentPositionRatio()
     {
@@ -101,19 +100,14 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
             int currentLocationIndex = (int)(currentLocation * model.StormIndexDataSet.dataPointCount);
             float currentSymhValue = model.StormIndexDataSet.data[0, 4, currentLocationIndex];
             float currentDTecValue = model.StormIndexDataSet.data[0, 1, currentLocationIndex];
-
-           
-
+            
             DateTime dateTime = model.StormIndexDataSet.IndexToDateTime(currentLocationIndex);
-
-
+            
             // Debug.Log("Current DateTime" + dateTime + "");
             view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture));
 
             // view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture) + "\nSYM-H is " + currentSymhValue + "\nCurrent Location Index " + currentLocationIndex);
-
-
-
+            
             if (transform.hasChanged)
             {
                 NumFramesEventNotSent += 1;
@@ -123,58 +117,54 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
                     Message.Send<SlicingPlaneMessage>("slicing_plane_position_changed",
                         new SlicingPlaneMessage(GetCurrentPositionRatio()));
                 }
-
-
+                
                 if (!isAudioSourceMuted)
                 {
                     if (model.SoundMuted == 0)
                     {
-
-
+                        //// Terminator effect is shown while plotting the DTEC (Delta Total Electron Count) values
                    
-                     //   if (Math.Max(currentLocationIndex, previousLocationIndex) >= model.sunriseIndex && model.sunriseIndex >= Math.Min(currentLocationIndex, previousLocationIndex))
-                       // {
-                         //   sunriseSoundObject.SetActive(false);
-                           // sunriseSoundObject.SetActive(true);
+                        if (Math.Max(currentLocationIndex, previousLocationIndex) >= model.sunriseIndex && model.sunriseIndex >= Math.Min(currentLocationIndex, previousLocationIndex))
+                        {
+                            sunriseSoundObject.SetActive(false);
+                            sunriseSoundObject.SetActive(true);
                         
-                        //}
+                        }
 
-   //                     if (Math.Max(currentLocationIndex, previousLocationIndex) >= model.sunsetIndex && model.sunsetIndex >= Math.Min(currentLocationIndex, previousLocationIndex))
-      //                  {
-        //                    sunsetSoundObject.SetActive(false);
-          //                  sunsetSoundObject.SetActive(true);
-            //            }
+                        if (Math.Max(currentLocationIndex, previousLocationIndex) >= model.sunsetIndex && model.sunsetIndex >= Math.Min(currentLocationIndex, previousLocationIndex))
+                        {
+                            sunsetSoundObject.SetActive(false);
+                            sunsetSoundObject.SetActive(true);
+                        }
 
-              //          view.SetPlaneSoundPitch(currentDTecValue);
-                //        view.SetupPlaneAudio(slicingPlaneAudioClip, currentDTecValue);
+                        view.SetPlaneSoundPitch(currentDTecValue);
+                        view.SetupPlaneAudio(slicingPlaneAudioClip, currentDTecValue);
 
-                        view.SetPlaneSoundPitch(currentSymhValue);
-                        view.SetupPlaneAudio(slicingPlaneAudioClip, currentSymhValue);
+                        //// No terminator effect is shown while plotting the SYM-H values
+                        // view.SetPlaneSoundPitch(currentSymhValue);
+                        // view.SetupPlaneAudio(slicingPlaneAudioClip, currentSymhValue);
                     }
 
-    //                if (currentLocationIndex > model.sunriseIndex && currentLocationIndex < model.sunsetIndex)
-      //              {
-        //                
-          //              sunriseColor.SetActive(true);
-            //        }
-              //      else
-                //    {
-                  //      sunriseColor.SetActive(false);
-                    //}
+                    //// Daytime is shown in yellow color, and nighttime is shown in blue color
+                    if (currentLocationIndex > model.sunriseIndex && currentLocationIndex < model.sunsetIndex)
+                    {
+                        sunriseColor.SetActive(true);
+                    }
+                    else
+                    {
+                        sunriseColor.SetActive(false);
+                    }
                     
 
-                   
+                   //// Old logic for setting the terminator effect
                     //if (currentLocationIndex > model.sunsetIndex - 20 && currentLocationIndex < model.sunsetIndex + 20)
                     //{
                     //    sunriseColor.SetActive(false);
                     //    sunsetColor.SetActive(true);
                     //}
 
-
-                    
                 }
-
-
+                
                 transform.hasChanged = false;
                 previousLocationIndex = currentLocationIndex;
             }
@@ -183,10 +173,8 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
             //AllReportsAtTimeStamp allReportsAtTimeStamp2 = model.Mc1Data.GetData(GetCurrentPositionRatio());
             //DateTime dateTime = allReportsAtTimeStamp2.GetDateTime();SetPlotLabel
             //view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture));
-
             
-
-         
+            
                 //+ " DateTime  " + model.StormIndexDataSet.data[0, 0, currentLocationIndex]
                 //+ " SH  " + model.StormIndexDataSet.data[0, 5, currentLocationIndex]);
             

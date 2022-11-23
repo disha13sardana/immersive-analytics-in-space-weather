@@ -52,8 +52,7 @@ namespace Scenes
 
         [SerializeField]
         private GameObject p032012;
-
-
+        
         [SerializeField]
         private GameObject p032013;
 
@@ -123,13 +122,12 @@ namespace Scenes
 
         private float ComputeVolume(float value)
         {
-            float minimumDataValue = -234f;
-            float maximumDataValue = -107f;
+            float minimumDataValue = -234f; // Min. SYM-H value among the 10 selected storms, indicating the strongest stroms of all
+            float maximumDataValue = -107f; // Maximum of min. SYM-H values among the 10 selected storms, indicating the weakest stroms of all
             float minimumVolume = 0.1f;
             float maximumVolume = 1.0f;
 
             float volumeValue = (-((value - minimumDataValue) / (maximumDataValue - minimumDataValue))) * (maximumVolume - minimumVolume) + maximumVolume;
-
 
             return volumeValue;
         }
@@ -138,7 +136,7 @@ namespace Scenes
         {
             //   float pitch = 1; // default
             float semitone = 1.05946f;  // this is 2^(1/12) = 1 semitone = approx value taken
-            float exponent = 1;
+            float exponent = 1; //Sunspot numbers mapped to different musical notes in an octave, source: [https://codepen.io/enxaneta/post/frequencies-of-musical-notes]
 
             switch (value)
             {
@@ -229,9 +227,7 @@ namespace Scenes
 
             // TODO Why does this exist?
             // pointList = CSVReader.Read("storm_day_sym_index"); <- old one
-
-
-
+            
         }
 
         // Update is called once per frame
@@ -254,10 +250,7 @@ namespace Scenes
                     Destroy(child.gameObject);
                 }
                 //SceneSwitch(currentDatasetIndex);
-
-
-
-
+                
                 if (datasetNum.Count > 0)
                 {
 
@@ -340,8 +333,7 @@ namespace Scenes
                             sunsetIndex = 1503;
 
                             break;
-
-
+                        
                        //case 7:
                             //stormIndexDataSetName = "DataFiles/symh_dtec_04-14-2006";
                             //solarCycleImage.transform.position = new Vector3(-1.782f, 0.39f, 2.165f);
@@ -424,9 +416,7 @@ namespace Scenes
                     //    break;
 
                 }
-
-
-
+                    
 
                     datasetLabelObject.transform.position = new Vector3(1.68f, 0.73f, 0.85f);
                     datasetLabelObject.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
@@ -438,9 +428,8 @@ namespace Scenes
                     datasetLabel.text = "Dataset: " + stormIndexDataSetName.Substring(20, 10);
 
                     var stormIndexDataSet = new StormIndexDataSet(stormIndexDataSetName);
-
-                   
-
+                    
+                    
                     // Left sliding bar handle with line
                     LeftSlidingBarHandleModel leftSlidingBarHandleModel = new LeftSlidingBarHandleModel();
                     leftSlidingBarHandleModel.SerialId = 0;
@@ -458,7 +447,6 @@ namespace Scenes
 
                     //rightSlidingBarHandleModel.CenterPosition = new Vector3(-4.5f, -6.6f, -58f);
                     rightSlidingBarHandleModel.CenterPosition = new Vector3(0f, 4f, -52f);
-
                     rightSlidingBarHandleModel.Scale = new Vector3(1.2f, 0.1f, 1.2f);
                     rightSlidingBarHandleModel.Rotation = new Vector3(90f, 0f, 0f);
                     rightSlidingBarHandleModel.StormIndexDataSet = stormIndexDataSet;
