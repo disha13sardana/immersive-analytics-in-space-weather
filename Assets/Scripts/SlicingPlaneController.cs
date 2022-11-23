@@ -131,33 +131,36 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
                     {
 
 
-                    
-                        if (Math.Max(currentLocationIndex, previousLocationIndex) >= model.sunriseIndex && model.sunriseIndex >= Math.Min(currentLocationIndex, previousLocationIndex))
-                        {
-                            sunriseSoundObject.SetActive(false);
-                            sunriseSoundObject.SetActive(true);
+                   
+                     //   if (Math.Max(currentLocationIndex, previousLocationIndex) >= model.sunriseIndex && model.sunriseIndex >= Math.Min(currentLocationIndex, previousLocationIndex))
+                       // {
+                         //   sunriseSoundObject.SetActive(false);
+                           // sunriseSoundObject.SetActive(true);
                         
-                        }
+                        //}
 
-                        if (Math.Max(currentLocationIndex, previousLocationIndex) >= model.sunsetIndex && model.sunsetIndex >= Math.Min(currentLocationIndex, previousLocationIndex))
-                        {
-                            sunsetSoundObject.SetActive(false);
-                            sunsetSoundObject.SetActive(true);
-                        }
+   //                     if (Math.Max(currentLocationIndex, previousLocationIndex) >= model.sunsetIndex && model.sunsetIndex >= Math.Min(currentLocationIndex, previousLocationIndex))
+      //                  {
+        //                    sunsetSoundObject.SetActive(false);
+          //                  sunsetSoundObject.SetActive(true);
+            //            }
 
-                        view.SetPlaneSoundPitch(currentDTecValue);
-                        view.SetupPlaneAudio(slicingPlaneAudioClip, currentDTecValue);
+              //          view.SetPlaneSoundPitch(currentDTecValue);
+                //        view.SetupPlaneAudio(slicingPlaneAudioClip, currentDTecValue);
+
+                        view.SetPlaneSoundPitch(currentSymhValue);
+                        view.SetupPlaneAudio(slicingPlaneAudioClip, currentSymhValue);
                     }
 
-                    if (currentLocationIndex > model.sunriseIndex && currentLocationIndex < model.sunsetIndex)
-                    {
-                        
-                        sunriseColor.SetActive(true);
-                    }
-                    else
-                    {
-                        sunriseColor.SetActive(false);
-                    }
+    //                if (currentLocationIndex > model.sunriseIndex && currentLocationIndex < model.sunsetIndex)
+      //              {
+        //                
+          //              sunriseColor.SetActive(true);
+            //        }
+              //      else
+                //    {
+                  //      sunriseColor.SetActive(false);
+                    //}
                     
 
                    
