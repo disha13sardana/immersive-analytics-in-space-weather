@@ -108,8 +108,9 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
 
 
             // Debug.Log("Current DateTime" + dateTime + "");
+            view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture));
 
-            view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture) + "\nSYM-H is " + currentSymhValue + "\nCurrent Location Index " + currentLocationIndex);
+            // view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture) + "\nSYM-H is " + currentSymhValue + "\nCurrent Location Index " + currentLocationIndex);
 
 
 

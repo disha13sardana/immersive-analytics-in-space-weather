@@ -650,7 +650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067871440594537453}
   m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -6.5, y: 2.7, z: -12}
+  m_LocalPosition: {x: -6.5, y: -8.9, z: -12}
   m_LocalScale: {x: 2, y: 2, z: 0.7000003}
   m_Children: []
   m_Father: {fileID: 3149261185677305328}
@@ -703,7 +703,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067871440594537453}
-  m_Text: '00/00/0000
+  m_Text: '00/00/0000 00:00:00
 
     SYM-H is -100'
   m_OffsetZ: 0
