@@ -110,7 +110,7 @@ public class SlicingPlaneView : MonoBehaviour
     //        return volumeValue;
     //    }
     /**
-     * Citation: https://answers.unity.com/questions/127562/pitch-in-unity.html
+     * Source: [https://answers.unity.com/questions/127562/pitch-in-unity.html]
      */
     private float ComputePitch(float value)
     {
@@ -140,14 +140,14 @@ public class SlicingPlaneView : MonoBehaviour
 
             // (-280 - 125)(-280 - 125)*(-24 - 0)
 
-            // float minimumDataValue = -37f; // dTEC
-            // float maximumDataValue = 14f; // dTEC
+            float minimumDataValue = -37f; // minimum dTEC for selected 14 storms
+            float maximumDataValue = 14f; // maximum dTEC for selected 14 storms
             
-            // float minimumDataValue = -450f; // SYM-H for all 37 storms
-            // float maximumDataValue = 125f; // SYM-H for all 37 storms
+            // float minimumDataValue = -450f; // minimum SYM-H for all 37 storms
+            // float maximumDataValue = 125f; // maximum SYM-H for all 37 storms
             
-            float minimumDataValue = -234f; // SYM-H for selected 14 storms
-            float maximumDataValue = 74f; // SYM-H for slected 14 storms
+            // float minimumDataValue = -234f; // minimum SYM-H for selected 14 storms
+            // float maximumDataValue = 74f; // maximum SYM-H for slected 14 storms
 
             float minimumExponent = -24f;   // A2 = 110hz
             float maximumExponent = 0f;      // A4 == 440hz
