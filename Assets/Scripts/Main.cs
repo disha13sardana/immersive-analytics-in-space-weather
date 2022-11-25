@@ -341,7 +341,6 @@ namespace Scenes
 
                             break;
 
-
                        //case 7:
                             //stormIndexDataSetName = "DataFiles/symh_dtec_04-14-2006";
                             //solarCycleImage.transform.position = new Vector3(-1.782f, 0.39f, 2.165f);
@@ -424,9 +423,6 @@ namespace Scenes
                     //    break;
 
                 }
-
-
-
 
                     datasetLabelObject.transform.position = new Vector3(1.68f, 0.73f, 0.85f);
                     datasetLabelObject.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
