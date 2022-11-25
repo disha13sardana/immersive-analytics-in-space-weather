@@ -126,9 +126,7 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets:
-  - {fileID: -9018940742707421470, guid: 80fa450f3681b264b987be0dff9f120f, type: 2}
-  - {fileID: -4002245789510652817, guid: 5720a5debcfdc9f4fb32e5bb56941613, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -600,7 +598,7 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: ISWATask1
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: C:\Users\Owner\Desktop\github\ISWA\CodeControlSpaceWeather\Assets\WSATestCertificate.pfx
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany
