@@ -34,6 +34,9 @@ namespace Scenes
         [SerializeField]
         private GameObject pressableButton2;
 
+        [SerializeField]
+        private GameObject cycleDatasetButton;
+
 
         public List<int> datasetNum = new List<int>();
         public int clicked = 0;
@@ -242,6 +245,8 @@ namespace Scenes
                 // solarCycleImage.SetActive(true);
 
                 pressableButton2.SetActive(false);
+                pressableButton.SetActive(false);
+                cycleDatasetButton.SetActive(true);
 
                 solarCycleImage.GetComponent<AudioSource>().volume = 0f;
                 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -422,8 +427,8 @@ namespace Scenes
                     datasetLabelObject.transform.position = new Vector3(1.68f, 0.73f, 0.85f);
                     datasetLabelObject.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
 
-                    pressableButton.transform.position = new Vector3(1.68f, 0.4f, 0.5f);
-                    pressableButton.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
+                    cycleDatasetButton.transform.position = new Vector3(1.68f, 0.4f, 0.5f);
+                    cycleDatasetButton.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
 
                     TextMesh datasetLabel = datasetLabelObject.GetComponent<TextMesh>();
                     datasetLabel.text = "Dataset: " + stormIndexDataSetName.Substring(20, 10);

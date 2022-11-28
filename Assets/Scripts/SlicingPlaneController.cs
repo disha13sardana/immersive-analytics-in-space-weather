@@ -102,13 +102,21 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
             float currentDTecValue = model.StormIndexDataSet.data[0, 1, currentLocationIndex];
             
             DateTime dateTime = model.StormIndexDataSet.IndexToDateTime(currentLocationIndex);
-            
+
             // Debug.Log("Current DateTime" + dateTime + "");
             //// Display datetime for SYM-H plots
             // view.SetPlotLabel(dateTime.ToString(CultureInfo.InvariantCulture));
 
+            float displayDTecValue = currentDTecValue;
+
+            displayDTecValue = (int)(displayDTecValue * 1000);
+
+            displayDTecValue = displayDTecValue / 1000;
+
+
+
             //// Display DTEC values for dtec plots
-            view.SetPlotLabel("Delta TEC is " + currentDTecValue);
+            view.SetPlotLabel("Delta TEC is " + displayDTecValue);
             // view.SetPlotLabel("Delta TEC is " + currentDTecValue + "\nCurrent Location Index " + currentLocationIndex);
             
             if (transform.hasChanged)
