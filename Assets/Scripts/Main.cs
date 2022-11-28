@@ -246,6 +246,11 @@ namespace Scenes
 
                 pressableButton2.SetActive(false);
 
+                if(soundMuted == 1)
+                {
+                    solarCycleImage.GetComponent<AudioSource>().enabled = false;
+                }
+
                 solarCycleImage.GetComponent<AudioSource>().volume = 0f;
                 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 //Debug.Log("R is hit");
@@ -276,6 +281,10 @@ namespace Scenes
                         //solarCycleImage.transform.position = new Vector3(-1.782f, 0.345f, 2.365f);
                         //solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-107f);
                         //p022004.GetComponent<AudioSource>().pitch = ComputePitch(74.6f);
+                        //                if (soundMuted == 1)
+                        //{
+                        //p022004.GetComponent<AudioSource>().enabled = false;
+                        //}
                         //p022004.SetActive(true);
                         //sunriseIndex = 919;
                         //sunsetIndex = 1531;
@@ -286,6 +295,10 @@ namespace Scenes
                             solarCycleImage.transform.position = new Vector3(-1.782f, 0.165f, 2.74f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-165f);
                             p022000.GetComponent<AudioSource>().pitch = ComputePitch(165.7f);
+                            if (soundMuted == 1)
+                            {
+                                p022000.GetComponent<AudioSource>().enabled = false;
+                            }
                             p022000.SetActive(true);
 
                             sunriseIndex = 918;
@@ -297,6 +310,10 @@ namespace Scenes
                             solarCycleImage.transform.position = new Vector3(-1.782f, 0.325f, 1.615f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-150f);
                             p032012.GetComponent<AudioSource>().pitch = ComputePitch(86.6f);
+                            if (soundMuted == 1)
+                            {
+                                p032012.GetComponent<AudioSource>().enabled = false;
+                            }
                             p032012.SetActive(true);
                             sunriseIndex = 873;
                             sunsetIndex = 1569;
@@ -307,6 +324,10 @@ namespace Scenes
                             solarCycleImage.transform.position = new Vector3(-1.782f, 0.34f, 1.52f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-132f);
                             p032013.GetComponent<AudioSource>().pitch = ComputePitch(78.3f);
+                            if (soundMuted == 1)
+                            {
+                                p032013.GetComponent<AudioSource>().enabled = false;
+                            }
                             p032013.SetActive(true);
                             sunriseIndex = 859;
                             sunsetIndex = 1580;
@@ -317,6 +338,10 @@ namespace Scenes
                             solarCycleImage.transform.position = new Vector3(-1.782f, 0.345f, 1.328f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-234f);
                             p032015.GetComponent<AudioSource>().pitch = ComputePitch(54.5f);
+                            if (soundMuted == 1)
+                            {
+                                p032015.GetComponent<AudioSource>().enabled = false;
+                            }
                             p032015.SetActive(true);
                             sunriseIndex = 860;
                             sunsetIndex = 1579;
@@ -327,6 +352,10 @@ namespace Scenes
                             //solarCycleImage.transform.position = new Vector3(-1.782f, 0.215f, 1.528f);
                             //solarCycleImage.GetComponent<AudioSource>().volume = .30f;
                             //p032001.GetComponent<AudioSource>().pitch = ComputePitch(187.9f);
+                            //if (soundMuted == 1)
+                            //{
+                            //    p032001.GetComponent<AudioSource>().enabled = false;
+                            //}
                             //p032001.SetActive(true);
                             //sunriseIndex = 716;
                             //sunsetIndex = 1369;
@@ -335,27 +364,39 @@ namespace Scenes
                             solarCycleImage.transform.position = new Vector3(-1.782f, 0.115f, 2.588f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-150f);
                             p102001.GetComponent<AudioSource>().pitch = ComputePitch(194.1f);
+                            if (soundMuted == 1)
+                            {
+                                p102001.GetComponent<AudioSource>().enabled = false;
+                            }
                             p102001.SetActive(true);
                             sunriseIndex = 885;
                             sunsetIndex = 1503;
 
                             break;
 
-                       //case 7:
+                            //case 7:
                             //stormIndexDataSetName = "DataFiles/symh_dtec_04-14-2006";
                             //solarCycleImage.transform.position = new Vector3(-1.782f, 0.39f, 2.165f);
                             //solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-111f);
                             //p042006.GetComponent<AudioSource>().pitch = ComputePitch(50.3f);
-                            //p042006.SetActive(true);
-                            //sunriseIndex = 807;
-                            //sunsetIndex = 1616;
+                            //if (soundMuted == 1)
+                            //{
+                            //    p042006.GetComponent<AudioSource>().enabled = false;
+                            //}
+                        //p042006.SetActive(true);
+                        //sunriseIndex = 807;
+                        //sunsetIndex = 1616;
 
-                            //break;git
+                        //break;git
                         case 6:
                             stormIndexDataSetName = "DataFiles/symh_dtec_04-17-2002";
                             solarCycleImage.transform.position = new Vector3(-1.782f, 0.12f, 2.54f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-151f);
                             p042002.GetComponent<AudioSource>().pitch = ComputePitch(186.9f);
+                            if (soundMuted == 1)
+                            {
+                                        p042002.GetComponent<AudioSource>().enabled = false;
+                            }
                             p042002.SetActive(true);
                             sunriseIndex = 802;
                             sunsetIndex = 1620;
@@ -366,6 +407,10 @@ namespace Scenes
                             solarCycleImage.transform.position = new Vector3(-1.782f, 0.18f, 2.6f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-122f);
                             p042001.GetComponent<AudioSource>().pitch = ComputePitch(161.7f);
+                            if (soundMuted == 1)
+                            {
+                                        p042001.GetComponent<AudioSource>().enabled = false;
+                            }
                             p042001.SetActive(true);
                             sunriseIndex = 799;
                             sunsetIndex = 1621;
@@ -376,16 +421,24 @@ namespace Scenes
                             solarCycleImage.transform.position = new Vector3(-1.782f, 0.37f, 2.23f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-179f);
                             p082005.GetComponent<AudioSource>().pitch = ComputePitch(60.5f);
+                            if (soundMuted == 1)
+                            {
+                                        p082005.GetComponent<AudioSource>().enabled = false;
+                            }
                             p082005.SetActive(true);
                             sunriseIndex = 803;
                             sunsetIndex = 1622;
 
                             break;
-                      //case 11:
-                            //stormIndexDataSetName = "DataFiles/symh_dtec_08-30-2004";
-                            //solarCycleImage.transform.position = new Vector3(-1.782f, 0.36f, 2.32f);
-                            //solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-128f);
-                            //p082004.GetComponent<AudioSource>().pitch = ComputePitch(69.7);
+                    //case 11:
+                    //stormIndexDataSetName = "DataFiles/symh_dtec_08-30-2004";
+                    //solarCycleImage.transform.position = new Vector3(-1.782f, 0.36f, 2.32f);
+                    //solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-128f);
+                    //p082004.GetComponent<AudioSource>().pitch = ComputePitch(69.7);
+                    //if (soundMuted == 1)
+                    //{
+                    //            p082004.GetComponent<AudioSource>().enabled = false;
+                    //}
                             //p082004.SetActive(true);
                             //sunriseIndex = 810;
                             //sunsetIndex = 1611;
@@ -396,16 +449,24 @@ namespace Scenes
                             solarCycleImage.transform.position = new Vector3(-1.782f, 0.12f, 2.5f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-109f);
                             p092002.GetComponent<AudioSource>().pitch = ComputePitch(187.9f);
+                            if (soundMuted == 1)
+                            {
+                                        p092002.GetComponent<AudioSource>().enabled = false;
+                            }
                             p092002.SetActive(true);
                             sunriseIndex = 816;
                             sunsetIndex = 1603;
-
+                            
                             break;
                         default:
                             stormIndexDataSetName = "DataFiles/symh_dtec_09-11-2005";
                             solarCycleImage.transform.position = new Vector3(-1.782f, 0.42f, 2.22f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-137f);
                             p092005.GetComponent<AudioSource>().pitch = ComputePitch(37.2f);
+                            if (soundMuted == 1)
+                            {
+                                p092005.GetComponent<AudioSource>().enabled = false;
+                            }
                             p092005.SetActive(true);
                             sunriseIndex = 824;
                             sunsetIndex = 1589;
@@ -416,6 +477,10 @@ namespace Scenes
                     //    solarCycleImage.transform.position = new Vector3(-1.782f, 0.43f, 1.19f);
                     //    solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-114f);
                     //    p102016.GetComponent<AudioSource>().pitch = ComputePitch(33.4f);
+                    //if (soundMuted == 1)
+                    //{
+                    //    p102016.GetComponent<AudioSource>().enabled = false;
+                    //}
                     //    p102016.SetActive(true);
                     //    sunriseIndex = 865;
                     //    sunsetIndex = 1528;
