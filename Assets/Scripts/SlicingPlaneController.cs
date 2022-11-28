@@ -62,15 +62,15 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
          float currentLocation = GetCurrentPositionRatio();
          int currentLocationIndex = (int)(currentLocation * model.StormIndexDataSet.dataPointCount);
          float currentSymhValue = model.StormIndexDataSet.data[0, 4, currentLocationIndex];
-            float currentAsymhValue = model.StormIndexDataSet.data[0, 2, currentLocationIndex];
+            float currentDTecValue = model.StormIndexDataSet.data[0, 1, currentLocationIndex];
 
             previousLocationIndex = currentLocationIndex;
 
 
             if (model.SoundMuted == 0)
             {
-                view.SetPlaneSoundPitch(currentAsymhValue);
-                view.SetupPlaneAudio(slicingPlaneAudioClip, currentAsymhValue);
+                view.SetPlaneSoundPitch(currentSymhValue);
+                view.SetupPlaneAudio(slicingPlaneAudioClip, currentSymhValue);
             }
 
 
