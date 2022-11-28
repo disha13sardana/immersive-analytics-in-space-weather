@@ -31,7 +31,7 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
     private int previousLocationIndex;
 
 
-
+    
 
     public void Awake()
     {
@@ -44,6 +44,7 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
         view.SetPosition(model.Position);
         view.SetScale(model.Scale);
         view.SetRotation(model.Rotation);
+            model.SoundMuted = 1;
             //         Message.Send<SlicingPlaneMessage>("slicing_plane_position_changed",
             //             new SlicingPlaneMessage(GetCurrentPositionRatio()));
 
@@ -67,11 +68,11 @@ public class SlicingPlaneController : Controller<SlicingPlaneModel>
             previousLocationIndex = currentLocationIndex;
 
 
-            if (model.SoundMuted == 0)
-            {
-                view.SetPlaneSoundPitch(currentSymhValue);
-                view.SetupPlaneAudio(slicingPlaneAudioClip, currentSymhValue);
-            }
+            //if (model.SoundMuted == 0)
+            //{
+            //    view.SetPlaneSoundPitch(currentSymhValue);
+            //    view.SetupPlaneAudio(slicingPlaneAudioClip, currentSymhValue);
+            //}
 
 
 
