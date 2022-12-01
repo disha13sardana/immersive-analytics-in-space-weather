@@ -96,7 +96,7 @@ namespace Scenes
 
         public int soundMuted = 0;
 
-        private int numOfDatasets = 10;
+        private int numOfDatasets = 9;
 
 
 
