@@ -99,7 +99,8 @@ namespace Scenes
 
         public int soundMuted = 0;
 
-        private int numOfDatasets = 10;
+        // Number of storm datasets (also, the number of trials for each task)
+        private int numOfDatasets = 9;
 
 
 
@@ -299,7 +300,7 @@ namespace Scenes
                         //break;
                         case 1:
                             stormIndexDataSetName = "DataFiles/symh_dtec_02-12-2000";
-                            solarCycleImage.transform.position = new Vector3(-1.782f, 0.165f, 2.74f);
+                            solarCycleImage.transform.position = new Vector3(-1.782f, 0.151f, 2.734f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-165f);
                             p022000.GetComponent<AudioSource>().pitch = ComputePitch(165.7f);
                             if (soundMuted == 1)
@@ -314,7 +315,7 @@ namespace Scenes
                             break;
                         case 2:
                             stormIndexDataSetName = "DataFiles/symh_dtec_03-09-2012";
-                            solarCycleImage.transform.position = new Vector3(-1.782f, 0.325f, 1.615f);
+                            solarCycleImage.transform.position = new Vector3(-1.782f, 0.303f, 1.581f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-150f);
                             p032012.GetComponent<AudioSource>().pitch = ComputePitch(86.6f);
                             if (soundMuted == 1)
@@ -328,7 +329,7 @@ namespace Scenes
                             break;
                         case 3:
                             stormIndexDataSetName = "DataFiles/symh_dtec_03-17-2013";
-                            solarCycleImage.transform.position = new Vector3(-1.782f, 0.34f, 1.52f);
+                            solarCycleImage.transform.position = new Vector3(-1.782f, 0.318f, 1.489f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-132f);
                             p032013.GetComponent<AudioSource>().pitch = ComputePitch(78.3f);
                             if (soundMuted == 1)
@@ -342,7 +343,7 @@ namespace Scenes
                             break;
                         case 4:
                             stormIndexDataSetName = "DataFiles/symh_dtec_03-17-2015";
-                            solarCycleImage.transform.position = new Vector3(-1.782f, 0.345f, 1.328f);
+                            solarCycleImage.transform.position = new Vector3(-1.782f, 0.345f, 1.29f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-234f);
                             p032015.GetComponent<AudioSource>().pitch = ComputePitch(54.5f);
                             if (soundMuted == 1)
@@ -411,7 +412,7 @@ namespace Scenes
                             break;
                         case 7:
                             stormIndexDataSetName = "DataFiles/symh_dtec_04-18-2001";
-                            solarCycleImage.transform.position = new Vector3(-1.782f, 0.18f, 2.6f);
+                            solarCycleImage.transform.position = new Vector3(-1.782f, 0.172f, 2.626f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-122f);
                             p042001.GetComponent<AudioSource>().pitch = ComputePitch(161.7f);
                             if (soundMuted == 1)
@@ -452,7 +453,7 @@ namespace Scenes
                             //break;
                         case 8:
                             stormIndexDataSetName = "DataFiles/symh_dtec_09-04-2002";
-                            solarCycleImage.transform.position = new Vector3(-1.782f, 0.12f, 2.5f);
+                            solarCycleImage.transform.position = new Vector3(-1.782f, 0.12f, 2.492f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-109f);
                             p092002.GetComponent<AudioSource>().pitch = ComputePitch(187.9f);
                             if (soundMuted == 1)
@@ -465,7 +466,7 @@ namespace Scenes
                             break;
                         default:
                             stormIndexDataSetName = "DataFiles/symh_dtec_09-11-2005";
-                            solarCycleImage.transform.position = new Vector3(-1.782f, 0.42f, 2.22f);
+                            solarCycleImage.transform.position = new Vector3(-1.782f, 0.384f, 2.199f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-137f);
                             p092005.GetComponent<AudioSource>().pitch = ComputePitch(37.2f);
                             if (soundMuted == 1)
