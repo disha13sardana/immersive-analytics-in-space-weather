@@ -370,16 +370,16 @@ namespace Scenes
                             sunsetIndex = 1621;
 
                             break;
-                        case 8:
-                            stormIndexDataSetName = "DataFiles/symh_dtec_08-24-2005";
-                            solarCycleImage.transform.position = new Vector3(-1.782f, 0.37f, 2.23f);
-                            solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-179f);
-                            p082005.GetComponent<AudioSource>().pitch = ComputePitch(60.5f);
-                            p082005.SetActive(true);
-                            sunriseIndex = 803;
-                            sunsetIndex = 1622;
+ //                       case 8:
+   //                         stormIndexDataSetName = "DataFiles/symh_dtec_08-24-2005";
+     //                       solarCycleImage.transform.position = new Vector3(-1.782f, 0.37f, 2.23f);
+       //                     solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-179f);
+         //                   p082005.GetComponent<AudioSource>().pitch = ComputePitch(60.5f);
+           //                 p082005.SetActive(true);
+             //               sunriseIndex = 803;
+               //             sunsetIndex = 1622;
 
-                            break;
+                 //           break;
                       //case 11:
                             //stormIndexDataSetName = "DataFiles/symh_dtec_08-30-2004";
                             //solarCycleImage.transform.position = new Vector3(-1.782f, 0.36f, 2.32f);
@@ -390,7 +390,7 @@ namespace Scenes
                             //sunsetIndex = 1611;
 
                             //break;
-                        case 9:
+                        case 8:
                             stormIndexDataSetName = "DataFiles/symh_dtec_09-04-2002";
                             solarCycleImage.transform.position = new Vector3(-1.782f, 0.12f, 2.5f);
                             solarCycleImage.GetComponent<AudioSource>().volume = ComputeVolume(-109f);
