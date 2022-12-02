@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: ISWA_Task_1
-  productName: ISWA_Task_1
+  companyName: ISWA_Training
+  productName: ISWA_Training
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -596,16 +596,16 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: ISWATask1
+  metroPackageName: ISWATraining
   metroPackageVersion: 1.0.0.0
   metroCertificatePath: C:\Users\Owner\Desktop\github\ISWA\CodeControlSpaceWeather\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany
   metroCertificateNotAfter: 009b022858ead701
-  metroApplicationDescription: ISWA_Task_1
+  metroApplicationDescription: ISWA_Training
   wsaImages: {}
-  metroTileShortName: ISWA_Task_1
+  metroTileShortName: ISWA_Training
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0

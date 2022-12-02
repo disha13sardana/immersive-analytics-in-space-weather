@@ -100,7 +100,7 @@ namespace Scenes
         public int soundMuted = 0;
 
         // Number of storm datasets (also, the number of trials for each task)
-        private int numOfDatasets = 9;
+        private int numOfDatasets = 3;
 
 
 
