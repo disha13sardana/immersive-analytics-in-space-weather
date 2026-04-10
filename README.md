@@ -632,8 +632,8 @@ Doctoral Dissertation, Virginia Tech.
 
 @article{sardana2024embodied,
   title={Embodied Exploration of Space Weather Datasets in a Mixed Reality Environment},
-  author={Sardana, Disha and Kahaliya, Sarthak and Earle, Gregory and Gracanin, Denis},
-  journal={Vol. 2024, Authorea Preprints. ESS Open Archive},
+  author={Sardana, Disha and Kahaliya, Sarthak and Earle, Gregory and Gra{\v{c}}anin, Denis},
+  journal={ESS Open Archive},
   year={2024},
   publisher={Authorea}
 }
