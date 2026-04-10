@@ -609,9 +609,9 @@ This repository is the codebase for the following research. If you use this code
 In 2025 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW), pp. 1224-1225. IEEE, 2025.
 [https://ieeexplore.ieee.org/abstract/document/10972487](https://ieeexplore.ieee.org/abstract/document/10972487)
 
-**Sardana, D., Kahaliya, S., Earle, G., & Gracanin, D. (2025)**
+**Sardana, D., Kahaliya, S., Earle, G., & Gracanin, D. (2024)**
 *"Embodied Exploration of Space Weather Datasets in a Mixed Reality Environment."*
-Authorea Preprints.
+In AGU Fall Meeting Abstracts. (Vol. 2024, Authorea Preprints. ESS Open Archive).
 
 **Sardana, D. (2023)**
 *"Embodied Data Exploration in Immersive Environments: Application in Geophysical Data Analysis"*
@@ -630,11 +630,11 @@ Doctoral Dissertation, Virginia Tech.
   organization={IEEE}
 }
 
-@article{sardana2025embodied,
+@article{sardana2024embodied,
   title={Embodied Exploration of Space Weather Datasets in a Mixed Reality Environment},
   author={Sardana, Disha and Kahaliya, Sarthak and Earle, Gregory and Gracanin, Denis},
-  journal={Authorea Preprints},
-  year={2025},
+  journal={Vol. 2024, Authorea Preprints. ESS Open Archive},
+  year={2024},
   publisher={Authorea}
 }
 
