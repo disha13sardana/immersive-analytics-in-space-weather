@@ -604,7 +604,7 @@ Contributions from the research community are welcome, whether that's new visual
 
 This repository is the codebase for the following research. If you use this code in your research, please cite:
 
-**Sardana, Disha, Lee Lisle, Denis Gračanin, Ivica Ico Bukvic, Krešimir Matković, and Gregory Earle. (2025)**
+**Sardana, D., Lisle, L., Gračanin, D., Bukvic, I. I., Matković, K., & Earle, G. (2025).**
 *"Evaluating the Impact of Sonification in an Immersive Analytics Environment Using Real-World Geophysical Datasets."*
 In 2025 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW), pp. 1224-1225. IEEE, 2025.
 [https://ieeexplore.ieee.org/abstract/document/10972487](https://ieeexplore.ieee.org/abstract/document/10972487)
@@ -655,7 +655,7 @@ Doctoral Dissertation, Virginia Tech.
 Copyright (c) 2026 Disha Sardana
 
 **Data Licenses**:
-- **SYM-H Index**: Data provided by the World Data Center for Geomagnetism, Kyoto. Proper acknowledgment of the data source is requested when publishing results.
+- **SYM-H Index**: Data provided by the World Data Center for Geomagnetism, Kyoto. Please cite the data source when publishing results.
 - **Sunspot Number**: Data sourced from NOAA Space Weather Prediction Center (SWPC), a U.S. government public data resource.
 - **TEC data**: Pre-processed following the methodology of Debchoudhury et al. Dataset available at Zenodo: [10.5281/zenodo.3762758](https://doi.org/10.5281/zenodo.3762758)
 
@@ -695,14 +695,13 @@ When using this work, please cite the publications above.
 - Mixed Reality Toolkit (MRTK): [github.com/microsoft/MixedRealityToolkit-Unity](https://github.com/microsoft/MixedRealityToolkit-Unity)
 - Unity for HoloLens: [learn.microsoft.com/windows/mixed-reality/develop/unity](https://learn.microsoft.com/windows/mixed-reality/develop/unity/unity-development-overview)
 - HoloLens 2 Tutorials: [Microsoft Learn](https://learn.microsoft.com/training/paths/beginner-hololens-2-tutorials/)
-- Immersive Analytics Community: [immersiveanalytics.net](https://immersiveanalytics.net/)
 
 ---
 
 ## 🙏 Acknowledgements
 
-- **Debchoudhury et al.** for the TEC pre-processed datasets, this work builds upon
-- **Visual Analytics and Immersive Analytics research communities** for foundational work, this builds upon
+- **Debchoudhury et al.** for the TEC pre-processed datasets, this work builds upon [DOI: https://doi.org/10.1029/2020JA028125](https://doi.org/10.1029/2020JA028125)
+- **Visual Analytics and Immersive Analytics research communities** for their foundational work in the domain
 - **Virginia Tech ICAT** for research support and facilities: [icat.vt.edu](https://icat.vt.edu/)
 - All contributors and participants who helped develop and evaluate this system
 
